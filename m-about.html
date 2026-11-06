@@ -5,10 +5,12 @@
 <title>About Malak Usama | Product Designer</title><meta name="description" content="Malak Usama is a senior product designer for lending and regulated fintech. Seven years, 20+ products, 10+ markets.">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#050505">
-<script>(function(){var p=location.pathname.split('/').pop()||'index.html',m=window.innerWidth<=700,
-to={'Main.dc.html':'M-Home.dc.html','index.html':'M-Home.dc.html','About.dc.html':'M-About.dc.html'},
-back={'M-Home.dc.html':'Main.dc.html','M-About.dc.html':'About.dc.html'};
-var t=m?to[p]:back[p];if(t)location.replace(t+location.search+location.hash)})();</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>(function(){var p=location.pathname.replace(/\.html$/,'').replace(/\/+$/,'')||'/';if(p==='/index')p='/';var m=window.innerWidth<=700,
+to={'/':'/m','/about':'/m-about'},back={'/m':'/','/m-about':'/about'};
+var t=m?to[p]:back[p];if(t){if(m||true){location.replace(t+location.search+location.hash)}}
+else if(m&&back[p]===undefined&&0){}
+})();</script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -182,6 +184,16 @@ h1,h2,h3,p,figure{margin:0}
 @media(max-width:700px){.nb-wrap{padding:0 20px 24px}.nb-c{padding:22px}.nb-hero{padding:28px 20px}.nb-hg{grid-template-columns:minmax(0,1fr) 84px;align-items:start}.nb-me{width:84px;height:84px;order:2}.nb-hd{font-size:26px}.nb-sub{font-size:14px}.nb-st{flex-wrap:nowrap}.nb-st>div{margin-right:12px;padding-right:0}.nb-st>div+div{padding-left:12px}.nb-st b{font-size:24px}.nb-st span{font-size:11px}.nb-bg{grid-template-columns:1fr}.nb-s1,.nb-s2,.nb-s4,.nb-s6{grid-column:auto}.nb-g4{grid-template-columns:repeat(2,minmax(0,1fr))}.nb-g4 .nb-c{padding:18px}.nb-cloud span{padding:10px 16px}.nb-close{padding:28px 22px;min-height:200px}}
 @media(max-width:520px){.nb-g4{grid-template-columns:1fr}}
 .nb-wrap{padding-top:16px}
+
+.nh-logo{position:absolute;left:0;top:50%;transform:translateY(-50%);display:flex;width:36px;height:32px}
+.bf{overflow:visible;display:block}
+.bf-wl{transform-box:fill-box;transform-origin:100% 50%;animation:bfl 4.4s ease-in-out infinite}
+.bf-wr{transform-box:fill-box;transform-origin:0% 50%;animation:bfl 4.4s ease-in-out infinite}
+@keyframes bfl{0%,56%,100%{transform:scaleX(1)}62%{transform:scaleX(.6)}68%{transform:scaleX(1)}74%{transform:scaleX(.7)}80%{transform:scaleX(1)}}
+.bf-b{animation:bfb 4.4s ease-in-out infinite}@keyframes bfb{0%,56%,100%{transform:translateY(0)}65%{transform:translateY(-.8px)}77%{transform:translateY(-.5px)}}
+.wm{display:inline-flex;align-items:center;gap:10px}
+@media(max-width:700px){.nh-nav .nh-logo{position:static;transform:none;width:28px;height:25px;margin-right:12px;flex:0 0 auto}}
+@media(prefers-reduced-motion:reduce){.bf-wl,.bf-wr,.bf-b{animation:none}}
 </style>
 </helmet>
 <div class="m">
@@ -193,16 +205,16 @@ h1,h2,h3,p,figure{margin:0}
 </div>
 
 <header class="bar">
-<a class="wm" href="M-Home.dc.html">Malak Usama</a>
+<a class="wm" href="/m"><svg class="bf " viewBox="0 0 32 28" width="26" height="23" fill="none" stroke="#D9C8A6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="bf-wl"><path d="M16 13 C12 4 4 2 2.5 7 C1.5 11 6 15 16 15 Z" fill="#D9C8A6" fill-opacity=".14"/><path d="M16 15 C9 15 6 19 8 23 C10 26 14 22 16 17 Z" fill="#D9C8A6" fill-opacity=".1"/></g><g class="bf-wr"><path d="M16 13 C20 4 28 2 29.5 7 C30.5 11 26 15 16 15 Z" fill="#D9C8A6" fill-opacity=".14"/><path d="M16 15 C23 15 26 19 24 23 C22 26 18 22 16 17 Z" fill="#D9C8A6" fill-opacity=".1"/></g><g class="bf-b"><path d="M16 9 V22"/><path d="M16 10 C15 7.5 14 6.5 12.8 6"/><path d="M16 10 C17 7.5 18 6.5 19.2 6"/></g></svg>Malak Usama</a>
 <button type="button" class="mb" aria-label="Open menu" onClick="{{ toggle }}"><i></i>Menu</button>
 </header>
 
 <div class="ov" style="{{ ovStyle }}" role="dialog" aria-label="Menu">
 <div class="ovt"><a class="wm" href="#top" onClick="{{ close }}">Malak Usama</a><button type="button" class="mb" aria-label="Close menu" onClick="{{ close }}">Close</button></div>
 <nav class="ovl">
-<a href="M-Home.dc.html" onClick="{{ close }}">Home<span>01</span></a>
-<a href="M-Home.dc.html#work" onClick="{{ close }}">Work<span>02</span></a>
-<a href="M-About.dc.html">About<span>03</span></a>
+<a href="/m" onClick="{{ close }}">Home<span>01</span></a>
+<a href="/m#work" onClick="{{ close }}">Work<span>02</span></a>
+<a href="/m-about">About<span>03</span></a>
 <a href="#contact" onClick="{{ close }}">Contact<span>04</span></a>
 </nav>
 <div class="ovf">Product design for lending and regulated fintech.</div>
@@ -220,7 +232,7 @@ h1,h2,h3,p,figure{margin:0}
 <p class="fs rvl">Ask my chat anything about my work, or send me a note.</p>
 <div class="fb"><a class="bt p" href="mailto:Malak@mpavida.com">Email me</a><a class="bt" href="https://www.linkedin.com/in/malakusama/">Message on LinkedIn</a></div>
 <div class="em">Email<b>Malak@mpavida.com</b></div>
-<div class="fl"><a href="https://www.linkedin.com/in/malakusama/">LinkedIn</a><a href="https://www.instagram.com/mpavida/">Instagram</a><a href="M-About.dc.html">About</a></div>
+<div class="fl"><a href="https://www.linkedin.com/in/malakusama/">LinkedIn</a><a href="https://www.instagram.com/mpavida/">Instagram</a><a href="/m-about">About</a></div>
 <div class="cp"><span>&copy; 2026 Malak Usama</span><a href="#top">Back to top</a></div>
 </footer>
 </main>
