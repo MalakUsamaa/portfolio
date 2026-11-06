@@ -135,6 +135,53 @@ h1,h2,h3,p,figure{margin:0}
 .edu h3{font:400 26px 'Inter Tight',Inter,sans-serif;letter-spacing:-.02em}
 .edu i{display:block;margin-top:6px;font:400 14px Inter,sans-serif;font-style:normal;color:#D9C8A6}
 .edu p{margin-top:12px;font-size:15.5px;line-height:1.65;color:#a7a29a}
+
+.nb-wrap{position:relative;z-index:6;box-sizing:border-box;width:100%;align-self:stretch;max-width:1440px;margin:0 auto;padding:0 56px 40px;font-family:Inter,system-ui,sans-serif;color:#f6f1e4;text-align:left;font-size:15px;line-height:1.5}
+.nb-wrap *{box-sizing:border-box}
+.nb-c{background:rgba(12,12,16,.9);border:1px solid #26262c;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.nb-hero{padding:56px clamp(20px,5vw,56px);gap:0}
+.nb-eb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#a7a29a;margin-bottom:18px}
+.nb-hg{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(20px,4vw,48px);align-items:center}
+.nb-hd{font:300 clamp(30px,4.2vw,50px)/1.1 'Inter Tight',Inter,sans-serif;letter-spacing:-.03em;margin:0;max-width:22ch;text-wrap:balance;color:#f6f1e4}
+.nb-hd em,.nb-c h3 em{font:italic 300 1.12em/1 'Cormorant Garamond',serif;letter-spacing:0;color:#D9C8A6}
+.nb-sub{color:#a7a29a;max-width:52ch;margin:18px 0 0;font-size:15px;line-height:1.5}
+.nb-me{width:clamp(96px,12vw,132px);height:clamp(96px,12vw,132px);border-radius:50%;object-fit:cover;object-position:50% 22%;display:block;box-shadow:0 0 0 1px #26262c,0 0 0 6px #0c0c10,0 0 0 7px #D9C8A6}
+.nb-st{display:flex;margin-top:40px;border-top:1px solid #26262c;flex-wrap:wrap}
+.nb-st>div{padding:16px 22px 0 0;margin-right:22px;display:flex;flex-direction:column;gap:2px}
+.nb-st>div+div{border-left:1px solid #26262c;padding-left:22px}
+.nb-st b{font:300 30px/1 'Inter Tight',Inter,sans-serif;letter-spacing:-.03em;color:#f6f1e4}
+.nb-st span{color:#a7a29a;font-size:12px}
+.nb-sec{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#a7a29a;margin:34px 0 14px}
+.nb-bg{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.nb-s2{grid-column:span 2}.nb-s4{grid-column:span 4}.nb-s6{grid-column:span 6}.nb-s1{grid-column:span 1}
+.nb-g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.nb-c h3{font:300 clamp(24px,2.6vw,34px)/1.12 'Inter Tight',Inter,sans-serif;letter-spacing:-.03em;margin:0;color:#f6f1e4}
+.nb-c h4{font:400 18px/1.2 'Inter Tight',Inter,sans-serif;letter-spacing:-.02em;margin:0;color:#f6f1e4}
+.nb-c p{margin:0;color:#a7a29a;line-height:1.6;font-size:15px}
+.nb-c p.nb-l{color:#cfcac0}
+.nb-c p.nb-sub{margin:18px 0 0}
+.nb-num{font:italic 300 30px/1 'Cormorant Garamond',serif;color:#D9C8A6}
+.nb-role{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#D9C8A6}
+.nb-feat{background:linear-gradient(160deg,#14130f,rgba(12,12,16,.92))}
+.nb-fact{display:flex;flex-direction:column;gap:2px;padding:12px 0;border-top:1px solid #26262c}
+.nb-fact b{font:400 17px/1.2 'Inter Tight',Inter,sans-serif;letter-spacing:-.02em;color:#f6f1e4}
+.nb-fact span{color:#a7a29a;font-size:13px}
+.nb-icb{width:52px;height:52px;border:1px solid #26262c;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.02);margin-bottom:6px}
+.nb-cloud{display:flex;flex-wrap:wrap;gap:10px}
+.nb-cloud span{border:1px solid #26262c;border-radius:999px;padding:12px 22px;font:300 clamp(18px,2.2vw,26px)/1 'Inter Tight',Inter,sans-serif;letter-spacing:-.02em;color:#f6f1e4}
+.nb-cloud span:nth-child(3n+1){font:italic 300 clamp(20px,2.5vw,30px)/1 'Cormorant Garamond',serif;color:#D9C8A6;border-color:#4a4333}
+.nb-big{font:300 clamp(30px,4.4vw,56px)/1.05 'Inter Tight',Inter,sans-serif;letter-spacing:-.03em;max-width:20ch;color:#f6f1e4;text-wrap:balance}
+.nb-close{padding:44px 36px;min-height:260px;justify-content:flex-end;gap:14px}
+.nb-k{animation:nbkey 3.2s ease-in-out infinite;transform-box:fill-box}.nb-k2{animation-delay:.25s}.nb-k3{animation-delay:.5s}.nb-k4{animation-delay:.75s}
+@keyframes nbkey{0%,40%,100%{transform:translateY(0)}15%{transform:translateY(2px)}}
+.nb-il{transform-origin:16px 28px;animation:nbsway 4.2s ease-in-out infinite}@keyframes nbsway{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+.nb-ic{transform-origin:16px 16px;animation:nbneedle 4.4s ease-in-out infinite}@keyframes nbneedle{0%,100%{transform:rotate(-25deg)}50%{transform:rotate(40deg)}}
+.nb-ir path{stroke-dasharray:60;animation:nbdraw 4s ease-in-out infinite}@keyframes nbdraw{0%{stroke-dashoffset:60}45%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:-60}}
+@media(prefers-reduced-motion:reduce){.nb-k,.nb-il,.nb-ic,.nb-ir path{animation:none}}
+@media(max-width:900px){.nb-g4{grid-template-columns:repeat(2,minmax(0,1fr))}.nb-s4{grid-column:span 6}.nb-s2{grid-column:span 6}}
+@media(max-width:700px){.nb-wrap{padding:0 20px 24px}.nb-c{padding:22px}.nb-hero{padding:28px 20px}.nb-hg{grid-template-columns:minmax(0,1fr) 84px;align-items:start}.nb-me{width:84px;height:84px;order:2}.nb-hd{font-size:26px}.nb-sub{font-size:14px}.nb-st{flex-wrap:nowrap}.nb-st>div{margin-right:12px;padding-right:0}.nb-st>div+div{padding-left:12px}.nb-st b{font-size:24px}.nb-st span{font-size:11px}.nb-bg{grid-template-columns:1fr}.nb-s1,.nb-s2,.nb-s4,.nb-s6{grid-column:auto}.nb-g4{grid-template-columns:repeat(2,minmax(0,1fr))}.nb-g4 .nb-c{padding:18px}.nb-cloud span{padding:10px 16px}.nb-close{padding:28px 22px;min-height:200px}}
+@media(max-width:520px){.nb-g4{grid-template-columns:1fr}}
+.nb-wrap{padding-top:16px}
 </style>
 </helmet>
 <div class="m">
@@ -161,34 +208,13 @@ h1,h2,h3,p,figure{margin:0}
 <div class="ovf">Product design for lending and regulated fintech.</div>
 </div>
 
-<main id="top">
-<section class="ah">
-<div class="hi">Hi, I am</div>
-<div class="ap"><img alt="Malak Usama" src="assets/cb94a590e7054afb113e058c50bcdbfe.gif"><div class="apc"><b>Malak</b><span>Global Product Designer</span></div></div>
-<h1>I design products <em>people trust.</em></h1>
-<p class="sub">I help lenders and fintechs turn complex, regulated money journeys into ones people trust and finish.</p>
-</section>
-<section class="sec">
-<div class="sh rvl"><div><div class="k">About me</div><h2 class="t2">Clear and honest, <em>calm when it matters</em></h2></div></div>
-<div class="prose">
-<p>I am a product designer with seven years in lending and regulated fintech. I design the moments where people hand over sensitive information, make a big financial decision or wait for an answer, and I make sure those moments are clear, honest and calm.</p>
-<p>My work sits where design, regulation and business meet. I read the rules behind a requirement, ask what problem a brief is really solving and design the journey from that, then test it with the people who will use it.</p>
-<p>I have worked on mortgages, credit and lending products across Europe, the Middle East and Australia, led a design team, built an enterprise design system and now run Mpavida, a product design consultancy for fintech, hospitality and SaaS startups.</p>
+<main id="top"><div style="height:8px"></div><div class="nb-wrap" style="padding-top:8px;padding-bottom:0"><div class="nb-c nb-hero"><div class="nb-hg"><div class="nb-tx"><div class="nb-eb">About</div><h1 class="nb-hd">Curious by nature,<br><em>creative at heart,</em><br>always chasing what's next.</h1><p class="nb-sub">Usually somewhere between a piano, a new place, a good conversation, and something new to learn.</p></div><img class="nb-me" alt="Malak Usama" src="assets/cb94a590e7054afb113e058c50bcdbfe.gif"></div><div class="nb-st"><div><b>3</b><span>Countries I call home</span></div><div><b>88</b><span>Keys on my favourite instrument</span></div><div><b>&infin;</b><span>Things I want to experience</span></div></div></div></div><div class="nb-wrap">
+<div class="nb-sec">A little biography</div><div class="nb-bg"><div class="nb-c nb-s4"><h3>From buildings <em>to screens</em></h3><p class="nb-l">I started in design and architecture at the University of Melbourne and graduated in graphic design, but the way architects think about structure, space and flow never left. Seven years on, I've designed across fintech, healthtech and edutech, from lending and mortgage journeys to brand identities and design systems, working across Europe, the Middle East and Australia. I now run Mpavida.</p><p class="nb-l">I'm naturally curious, a little restless, and always looking for something that makes me see things differently. I feel things deeply, think about things endlessly, and rarely take the ordinary route. I love beautiful details, meaningful connections, new experiences, and the feeling of being completely absorbed in something. Above all, I'm someone who never wants to stop discovering who I can become.</p></div>
+<div class="nb-c nb-s2 nb-feat"><div class="nb-role">At a glance</div><div class="nb-fact"><b>Bachelor of Design</b><span>University of Melbourne</span></div><div class="nb-fact"><b>7+ years of experience</b><span>Digital products, financial services &amp; emerging technology</span></div><div class="nb-fact"><b>Cross-functional leadership</b><span>Product strategy, design direction &amp; team mentorship</span></div></div></div>
+<div class="nb-sec">A few things that make me, me</div><div class="nb-bg nb-g4"><div class="nb-c nb-s1"><div class="nb-icb"><svg viewBox="0 0 32 32" width="30" height="30"><g fill="#f6f1e4" fill-opacity=".9"><rect class="nb-k nb-k1" x="4" y="8" width="5" height="17" rx="1.2"/><rect class="nb-k nb-k2" x="10" y="8" width="5" height="17" rx="1.2"/><rect class="nb-k nb-k3" x="16" y="8" width="5" height="17" rx="1.2"/><rect class="nb-k nb-k4" x="22" y="8" width="5" height="17" rx="1.2"/></g><g fill="#0c0c10"><rect x="7.5" y="8" width="3" height="10" rx=".8"/><rect x="13.5" y="8" width="3" height="10" rx=".8"/><rect x="19.5" y="8" width="3" height="10" rx=".8"/></g></svg></div><div class="nb-num">01</div><h4>Music</h4><p>A pianist at heart. Some things are better expressed without words.</p></div><div class="nb-c nb-s1"><div class="nb-icb"><svg viewBox="0 0 32 32" width="30" height="30"><g stroke="#d9c8a6" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 30 V14"/><g class="nb-il"><path d="M16 17 C9 17 6 11 6 6 C12 6 16 10 16 17 Z" fill="#d9c8a6" fill-opacity=".18"/><path d="M16 21 C22 21 26 16 26 11 C20 11 16 15 16 21 Z" fill="#d9c8a6" fill-opacity=".18"/></g></g></svg></div><div class="nb-num">02</div><h4>Slow living</h4><p>Unhurried days and time in nature keep me grounded, clear and curious.</p></div><div class="nb-c nb-s1"><div class="nb-icb"><svg viewBox="0 0 32 32" width="30" height="30"><g stroke="#d9c8a6" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><g class="nb-ic"><path d="M16 7 L19 16 L16 25 L13 16 Z" fill="#d9c8a6" fill-opacity=".25"/></g></g></svg></div><div class="nb-num">03</div><h4>Exploring</h4><p>Always drawn to new places, cultures and different perspectives.</p></div><div class="nb-c nb-s1"><div class="nb-icb"><svg viewBox="0 0 32 32" width="30" height="30"><g stroke="#d9c8a6" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="nb-ir"><path d="M5 29 V14 A5.5 5.5 0 0 1 16 14 V29"/><path d="M16 29 V14 A5.5 5.5 0 0 1 27 14 V29" stroke-opacity=".6"/><path d="M2 29 H30"/></g></svg></div><div class="nb-num">04</div><h4>Aesthetics</h4><p>I notice the details: spaces, objects, architecture and everything in between.</p></div></div>
+<div class="nb-sec">Things I could talk about for hours</div><div class="nb-bg"><div class="nb-c nb-s6"><div class="nb-cloud"><span>Music and piano</span><span>Architecture</span><span>Travel and cultures</span><span>Art and aesthetics</span><span>Slow living and nature</span><span>Psychology and human behaviour</span></div></div></div>
+<div class="nb-sec">One last thing</div><div class="nb-bg"><div class="nb-c nb-s6 nb-close"><div class="nb-big">There is always more to discover, and I would like to keep it that way.</div><div class="nb-role">Malak Usama</div></div></div>
 </div>
-</section>
-<section class="sec">
-<div class="sh rvl"><div><div class="k">Who I am</div><h2 class="t2">Beyond the work</h2></div></div>
-<div class="prose rvl" style="margin-top:18px"><p>I am drawn to quiet, well made things and to people who are straightforward and kind. I take initiative, stay steady under pressure and say what I think. I mentor and teach the people I work with.</p></div>
-<div class="hw"><div class="hc rvl"><span class="hn">01</span><h3>Architecture first</h3><p>I started in design and architecture, which still shapes how I think about structure, space and flow.</p></div><div class="hc rvl"><span class="hn">02</span><h3>Proactive and steady</h3><p>I move first. I bring prototypes, questions and clear next steps early, and I stay steady when the stakes are high.</p></div><div class="hc rvl"><span class="hn">03</span><h3>Giving back</h3><p>I led a team of six designers, and helping people grow is part of how I work.</p></div><div class="hc rvl"><span class="hn">04</span><h3>Off the screen</h3><p>I travel, play the piano and train aerials. Moving, making music and seeing new places keep my work fresh.</p></div></div>
-</section>
-<section class="sec">
-<div class="sh rvl"><div><div class="k">Experience</div><h2 class="t2">Where I have done the work</h2></div></div>
-<div class="tl"><div class="tr2 rvl"><h3>Revolut</h3><i>Product Designer, Credit</i><p>Mortgages and lending journeys across Ireland, Lithuania and the UK.</p></div><div class="tr2 rvl"><h3>Mpavida</h3><i>Founder</i><p>A product design consultancy working with fintech, hospitality and SaaS startups.</p></div><div class="tr2 rvl"><h3>Klivvr</h3><i>Product Designer</i><p>Owned UX for lending, onboarding and financial health features in a fast growing neobank.</p></div><div class="tr2 rvl"><h3>dopay</h3><i>Senior Product Designer and Product Strategist</i><p>Redesigned the website, built the design system, designed the funnel and advised on product.</p></div><div class="tr2 rvl"><h3>Vodafone</h3><i>Design Lead</i><p>Led a team of six designers and built the enterprise design system.</p></div><div class="tr2 rvl"><h3>Shoreditch Design Studio</h3><i>Designer</i><p>Brand and digital design for studio clients.</p></div></div>
-</section>
-<section class="sec">
-<div class="sh rvl"><div><div class="k">Education</div></div></div>
-<div class="edu rvl"><h3>Bachelor of Design</h3><i>University of Melbourne</i><p>With a major in graphic design. I began in design and architecture, which still shapes how I think about structure, space and flow.</p></div>
-</section>
 <footer class="ft" id="contact">
 <h2 class="big rvl">Have a project?<em>Tell me about it</em></h2>
 <p class="fs rvl">Ask my chat anything about my work, or send me a note.</p>
