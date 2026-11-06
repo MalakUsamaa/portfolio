@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Malak Usama | Senior Product Designer for lending and fintech</title><meta name="description" content="Malak Usama is a senior product designer for lending and regulated fintech. Seven years, 20+ products, 10+ markets.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<script>(function(){var p=location.pathname.split('/').pop()||'index.html',m=window.innerWidth<=700,
+to={'Main.dc.html':'M-Home.dc.html','index.html':'M-Home.dc.html','About.dc.html':'M-About.dc.html'},
+back={'M-Home.dc.html':'Main.dc.html','M-About.dc.html':'About.dc.html'};
+var t=m?to[p]:back[p];if(t)location.replace(t+location.search+location.hash)})();</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Inter+Tight:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+.hw{display:flex;gap:14px;height:380px;margin-top:44px}@media(max-width:900px){.hw{flex-direction:column;height:auto}.hw>div{flex:none !important}.hw .hwt{max-height:none !important;opacity:1 !important}}
+body{margin:0;background:#050505}
+a{color:#a7a29a;text-decoration:none}
+a:hover{color:#f6f1e4}
+.hero-abs{pointer-events:none}
+.hero-frame{pointer-events:auto;cursor:none}
+.hero-hover{pointer-events:auto}
+.sparkle{position:absolute;border-radius:50%;opacity:0;animation:twinkle 6s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.6)}50%{opacity:.8;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.sparkle{animation:none;opacity:.25}}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-24px) scale(1.08)}}
+.glow{position:absolute;border-radius:50%;pointer-events:none;z-index:0;animation:drift 18s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.glow{animation:none}}
+@keyframes logoloop{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.logo-track{display:flex;width:max-content;animation:logoloop 36s linear infinite}
+.logo-track span{white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.logo-track{animation:none}}
+@media (max-width:760px){
+  .hero-root{padding:24px 20px 32px !important}
+  .hero-stage{display:flex !important;flex-direction:column !important;gap:28px !important;min-height:0 !important}
+  .hero-abs{position:static !important;transform:none !important;max-width:none !important;text-align:left !important}
+  .hero-frame{width:100% !important}
+  .hero-usama{align-self:flex-end !important}
+  .hero-nav-links{gap:20px !important}
+}
+.nh{--f:clamp(76px,10.6vw,170px);font-family:Inter,system-ui,sans-serif;color:#f6f1e4}
+.nh-nav{display:flex;justify-content:center;align-items:center;height:80px;gap:12px;font-size:15px}
+.nh-l{display:flex;gap:28px;flex-wrap:wrap}
+.nh-l a{color:#8f8c85;transition:color .2s}.nh-l a:hover{color:#f6f1e4}
+.nh-l a.nh-act{color:#f6f1e4;text-decoration:underline;text-underline-offset:6px;text-decoration-color:rgba(255,255,255,.4)}
+.nh-r{display:flex;align-items:center;gap:16px;position:absolute;right:0;top:50%;transform:translateY(-50%)}
+.nh-av{display:flex;gap:8px;align-items:center;font-size:13px;color:#8f8c85}.nh-av i{width:7px;height:7px;border-radius:50%;background:#f6f1e4;animation:nhpulse 2.4s infinite}
+@keyframes nhpulse{50%{opacity:.3;transform:scale(.8)}}
+.nh-glass{position:relative;display:inline-flex;align-items:center;overflow:hidden;font:inherit;font-size:15px;color:#f6f1e4 !important;cursor:pointer;padding:15px 28px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.04));-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.38),inset 0 -1px 0 rgba(255,255,255,.06),0 14px 34px -14px rgba(0,0,0,.8);transition:border-color .3s}
+.nh-glass:before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.28) 50%,transparent 65%);transform:translateX(-120%);transition:transform .8s}
+.nh-glass:hover:before{transform:translateX(120%)}.nh-glass:hover{border-color:rgba(255,255,255,.4)}
+.nh-glass.nh-p{background:linear-gradient(135deg,rgba(255,255,255,.3),rgba(255,255,255,.1));border-color:rgba(255,255,255,.34);font-weight:500}
+.nh-glass.nh-sm{padding:10px 20px;font-size:14px;font-weight:500}
+.nh-stage{position:relative;min-height:790px}.nh-card{z-index:30 !important}
+@keyframes nhrise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.nh-rv{animation:nhrise .9s cubic-bezier(.2,.7,.2,1) both}
+.nh-big{position:absolute;inset:0;margin:0;font-family:'Inter Tight',Inter,system-ui,sans-serif;font-weight:300;letter-spacing:-.055em;line-height:.88;font-size:var(--f);color:#f6f1e4;z-index:1;pointer-events:none}
+.nh-big span{position:absolute;white-space:nowrap}.nh-big em{font-style:italic;font-weight:300}
+.nh-a{left:0;top:.38em}.nh-b{right:0;top:1.46em}.nh-c{left:0;top:2.54em}.nh-d{right:0;top:3.62em}
+.nh-eb{position:absolute;left:0;top:8px;z-index:3;display:flex;align-items:center;gap:16px;color:#8f8c85}.nh-eb .nm{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:400;font-size:26px;letter-spacing:.01em;text-transform:none;color:#f6f1e4;line-height:1}.nh-eb .ru{width:44px;height:1px;background:linear-gradient(90deg,#D9C8A6,rgba(255,255,255,.15))}.nh-eb .rl{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:#a7a29a}
+.nh-bl{position:absolute;left:0;bottom:20px;z-index:3;max-width:370px;display:flex;flex-direction:column;gap:22px}
+.nh-sub{margin:0;font-size:18px;line-height:1.6;font-weight:300;color:#cfcac0}
+.nh-btns{display:flex;gap:12px;flex-wrap:wrap}
+.nh-proof{position:relative;z-index:3;text-align:left;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:40px;padding-bottom:90px}
+.nh-proof>div{border-top:1px solid rgba(255,255,255,.12);padding-top:12px}
+.nh-proof b{display:block;font-family:'Inter Tight',Inter,sans-serif;font-weight:300;font-size:34px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.nh-proof>div>span{display:block;font-size:13px;color:#8f8c85}
+.nh-frame{position:absolute;left:0;right:0;margin-inline:auto;bottom:0;z-index:2;width:min(720px,50vw);aspect-ratio:1312/1199;cursor:pointer;display:block;color:inherit}
+.nh-frame:before{content:"";position:absolute;inset:6% 4% 0;background:radial-gradient(ellipse at 50% 45%,rgba(255,244,225,.10),transparent 68%);z-index:-1}
+.nh-still{position:absolute;inset:0;-webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 100%);mask-image:linear-gradient(180deg,#000 62%,transparent 100%)}
+.nh-still img{width:100%;height:100%;object-fit:contain;object-position:50% 100%;display:block;filter:grayscale(1) contrast(1.05) brightness(.66)}
+.nh-colr img{width:100%;height:100%;object-fit:contain;object-position:50% 100%;display:block;filter:saturate(.72) contrast(1.02)}.nh-colr{-webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 100%);mask-image:linear-gradient(180deg,#000 62%,transparent 100%)}.nh-hint{position:absolute;left:50%;bottom:3%;transform:translateX(-50%);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#8f8c85;white-space:normal;text-align:center;width:80%;line-height:1.5}
+.nh-abn{position:absolute;left:56px;right:56px;top:32px;height:80px;display:flex;justify-content:space-between;align-items:center;font-size:15px}
+.nh-hi{position:absolute;left:56px;top:128px;font-family:'Inter Tight',Inter,sans-serif;font-weight:300;font-size:clamp(84px,13.5vw,200px);line-height:.88;letter-spacing:-.055em}
+.nh-po{position:absolute;left:50%;top:132px;margin-left:calc(var(--fw,500px)/-2);width:var(--fw,500px);height:var(--fh,456px);-webkit-mask-image:radial-gradient(ellipse 50% 54% at 50% 46%,#000 32%,rgba(0,0,0,.5) 64%,transparent 100%);mask-image:radial-gradient(ellipse 50% 54% at 50% 46%,#000 32%,rgba(0,0,0,.5) 64%,transparent 100%)}
+.nh-po img{width:100%;height:100%;object-fit:cover;object-position:60% 30%;display:block}
+.nh-gp{position:absolute;left:56px;top:46%;display:flex;flex-direction:column;gap:8px}.nh-gp b{font-size:20px;font-weight:600;letter-spacing:-.01em}.nh-gp span{font-size:15px}
+.nh-mm{position:absolute;right:56px;top:46%;max-width:300px;text-align:right;font-size:26px;font-weight:500;line-height:1.25;letter-spacing:-.015em}
+.nh-mk{position:absolute;right:56px;bottom:12px;font-family:'Inter Tight',Inter,sans-serif;font-weight:300;font-style:italic;font-size:clamp(84px,13.5vw,200px);line-height:.88;letter-spacing:-.055em}
+.nh-tg{position:absolute;left:56px;bottom:40px;max-width:380px;font-size:20px;line-height:1.4;letter-spacing:-.01em}
+@media(max-width:760px){.nh-card{display:none}.nh{margin:-24px -20px 0 !important;padding:24px 20px 0 !important;--f:12.4vw}.nh-av{display:none}.nh-stage{min-height:0;display:flex;flex-direction:column;gap:20px;padding-bottom:30px}.nh-big{position:static;display:flex;flex-direction:column;margin-top:34px}.nh-big span{position:static}.nh-b,.nh-d{align-self:flex-end}.nh-eb{position:static;order:-1}.nh-frame{position:relative;width:96%;margin:-18vw auto 0}.nh-bl,.nh-proof{position:static;width:auto;max-width:none;text-align:left}.nh-proof{grid-template-columns:1fr 1fr;gap:14px}.nh-proof b{font-size:22px}}
+@media (prefers-reduced-motion:reduce){.nh-rv,.nh-av i{animation:none}.nh-glass:before{transition:none}}
+</style>
+</helmet>
+<div class="hero-root" style="position: relative; box-sizing: border-box; min-height: 900px; padding: 32px 56px 48px; background: radial-gradient(55% 45% at 50% 58%, rgba(255,255,255,0.07), rgba(5,5,5,0) 70%), radial-gradient(40% 40% at 88% 8%, rgba(120,110,170,0.14), rgba(5,5,5,0) 70%), radial-gradient(35% 35% at 6% 92%, rgba(120,110,170,0.10), rgba(5,5,5,0) 70%), #050505; color: #f6f1e4; font-family: Inter, system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+<div aria-hidden="true" style="position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden">
+<span class="sparkle" style="left: 17.2%; top: 68.6%; width: 1.5px; height: 1.5px; background: rgba(217,200,166,0.8); box-shadow: 0 0 5px rgba(217,200,166,0.55); animation-delay: -4.8s; animation-duration: 4.7s"></span>
+<span class="sparkle" style="left: 78.7%; top: 80.2%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -5.1s; animation-duration: 4.8s"></span>
+<span class="sparkle" style="left: 1.3%; top: 37.4%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -0.7s; animation-duration: 7.9s"></span>
+<span class="sparkle" style="left: 23.8%; top: 23.8%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -10.0s; animation-duration: 7.6s"></span>
+<span class="sparkle" style="left: 86.8%; top: 61.4%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -3.3s; animation-duration: 6.2s"></span>
+<span class="sparkle" style="left: 12.3%; top: 94.3%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -1.5s; animation-duration: 8.0s"></span>
+<span class="sparkle" style="left: 13.2%; top: 91.9%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -5.5s; animation-duration: 5.4s"></span>
+<span class="sparkle" style="left: 48.5%; top: 19.3%; width: 1px; height: 1px; background: rgba(200,205,255,0.55); box-shadow: 0 0 2px rgba(200,205,255,0.55); animation-delay: -8.7s; animation-duration: 4.8s"></span>
+<span class="sparkle" style="left: 77.5%; top: 21.4%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -8.9s; animation-duration: 7.7s"></span>
+<span class="sparkle" style="left: 75.8%; top: 57.9%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -1.2s; animation-duration: 6.1s"></span>
+<span class="sparkle" style="left: 82.0%; top: 20.7%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -8.9s; animation-duration: 5.8s"></span>
+<span class="sparkle" style="left: 36.8%; top: 45.2%; width: 1px; height: 1px; background: rgba(217,200,166,0.55); box-shadow: 0 0 2px rgba(217,200,166,0.55); animation-delay: -9.9s; animation-duration: 5.6s"></span>
+<span class="sparkle" style="left: 3.6%; top: 10.1%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -9.9s; animation-duration: 6.2s"></span>
+<span class="sparkle" style="left: 49.2%; top: 54.9%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -2.2s; animation-duration: 6.8s"></span>
+<span class="sparkle" style="left: 55.5%; top: 62.0%; width: 1px; height: 1px; background: rgba(200,205,255,0.55); box-shadow: 0 0 2px rgba(200,205,255,0.55); animation-delay: -1.7s; animation-duration: 5.4s"></span>
+<span class="sparkle" style="left: 91.9%; top: 35.0%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -3.1s; animation-duration: 4.1s"></span>
+<span class="sparkle" style="left: 7.4%; top: 80.7%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -3.7s; animation-duration: 7.3s"></span>
+<span class="sparkle" style="left: 67.2%; top: 89.1%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -4.1s; animation-duration: 8.9s"></span>
+<span class="sparkle" style="left: 95.2%; top: 58.9%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -4.9s; animation-duration: 5.6s"></span>
+<span class="sparkle" style="left: 25.2%; top: 86.9%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -0.7s; animation-duration: 7.9s"></span>
+<span class="sparkle" style="left: 76.8%; top: 48.4%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -0.5s; animation-duration: 4.9s"></span>
+<span class="sparkle" style="left: 29.4%; top: 42.1%; width: 1px; height: 1px; background: rgba(200,205,255,0.55); box-shadow: 0 0 2px rgba(200,205,255,0.55); animation-delay: -0.7s; animation-duration: 5.4s"></span>
+<span class="sparkle" style="left: 89.1%; top: 97.4%; width: 1.5px; height: 1.5px; background: rgba(217,200,166,0.8); box-shadow: 0 0 5px rgba(217,200,166,0.55); animation-delay: -4.8s; animation-duration: 4.9s"></span>
+<span class="sparkle" style="left: 95.0%; top: 52.5%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -0.3s; animation-duration: 4.7s"></span>
+<span class="sparkle" style="left: 83.1%; top: 78.9%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -6.0s; animation-duration: 5.8s"></span>
+<span class="sparkle" style="left: 58.0%; top: 84.2%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -5.3s; animation-duration: 5.0s"></span>
+<span class="sparkle" style="left: 76.3%; top: 2.0%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -9.5s; animation-duration: 3.6s"></span>
+<span class="sparkle" style="left: 59.2%; top: 64.1%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -5.8s; animation-duration: 4.9s"></span>
+<span class="sparkle" style="left: 40.7%; top: 95.0%; width: 2.5px; height: 2.5px; background: rgba(200,205,255,0.95); box-shadow: 0 0 10px rgba(200,205,255,0.55); animation-delay: -1.3s; animation-duration: 4.0s"></span>
+<span class="sparkle" style="left: 10.2%; top: 3.5%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -1.4s; animation-duration: 8.3s"></span>
+<span class="sparkle" style="left: 65.2%; top: 13.4%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -3.2s; animation-duration: 6.2s"></span>
+<span class="sparkle" style="left: 22.5%; top: 17.3%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -3.8s; animation-duration: 7.4s"></span>
+<span class="sparkle" style="left: 54.9%; top: 5.5%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -8.7s; animation-duration: 7.8s"></span>
+<span class="sparkle" style="left: 78.5%; top: 1.8%; width: 1px; height: 1px; background: rgba(217,200,166,0.55); box-shadow: 0 0 2px rgba(217,200,166,0.55); animation-delay: -0.6s; animation-duration: 7.7s"></span>
+<span class="sparkle" style="left: 18.2%; top: 70.7%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -7.0s; animation-duration: 5.2s"></span>
+<span class="sparkle" style="left: 5.1%; top: 39.1%; width: 1px; height: 1px; background: rgba(200,205,255,0.55); box-shadow: 0 0 2px rgba(200,205,255,0.55); animation-delay: -9.0s; animation-duration: 5.1s"></span>
+<span class="sparkle" style="left: 50.3%; top: 54.8%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -1.0s; animation-duration: 6.8s"></span>
+<span class="sparkle" style="left: 50.8%; top: 73.0%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -3.1s; animation-duration: 7.3s"></span>
+<span class="sparkle" style="left: 52.5%; top: 55.9%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -8.1s; animation-duration: 8.9s"></span>
+<span class="sparkle" style="left: 35.8%; top: 32.2%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -1.1s; animation-duration: 3.9s"></span>
+<span class="sparkle" style="left: 8.2%; top: 80.8%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -4.5s; animation-duration: 6.9s"></span>
+<span class="sparkle" style="left: 2.9%; top: 64.2%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -5.2s; animation-duration: 5.6s"></span>
+<span class="sparkle" style="left: 40.3%; top: 23.1%; width: 1px; height: 1px; background: rgba(200,205,255,0.55); box-shadow: 0 0 2px rgba(200,205,255,0.55); animation-delay: -4.3s; animation-duration: 4.9s"></span>
+<span class="sparkle" style="left: 70.0%; top: 81.1%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -4.6s; animation-duration: 4.8s"></span>
+<span class="sparkle" style="left: 38.8%; top: 48.7%; width: 1.5px; height: 1.5px; background: rgba(217,200,166,0.8); box-shadow: 0 0 5px rgba(217,200,166,0.55); animation-delay: -9.6s; animation-duration: 4.0s"></span>
+<span class="sparkle" style="left: 48.0%; top: 49.2%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -8.9s; animation-duration: 7.8s"></span>
+<span class="sparkle" style="left: 62.4%; top: 75.3%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -8.6s; animation-duration: 7.3s"></span>
+<span class="sparkle" style="left: 67.9%; top: 25.0%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -3.9s; animation-duration: 6.9s"></span>
+<span class="sparkle" style="left: 81.8%; top: 95.4%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -0.1s; animation-duration: 5.2s"></span>
+<span class="sparkle" style="left: 31.5%; top: 39.3%; width: 1px; height: 1px; background: rgba(200,205,255,0.55); box-shadow: 0 0 2px rgba(200,205,255,0.55); animation-delay: -5.5s; animation-duration: 3.9s"></span>
+<span class="sparkle" style="left: 30.7%; top: 93.5%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -4.6s; animation-duration: 4.1s"></span>
+<span class="sparkle" style="left: 94.7%; top: 70.0%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -3.4s; animation-duration: 7.0s"></span>
+<span class="sparkle" style="left: 67.8%; top: 26.6%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -3.2s; animation-duration: 4.9s"></span>
+<span class="sparkle" style="left: 83.8%; top: 16.0%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -2.0s; animation-duration: 6.8s"></span>
+<span class="sparkle" style="left: 28.2%; top: 38.1%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -4.7s; animation-duration: 5.9s"></span>
+<span class="sparkle" style="left: 61.5%; top: 28.5%; width: 1px; height: 1px; background: rgba(217,200,166,0.55); box-shadow: 0 0 2px rgba(217,200,166,0.55); animation-delay: -3.8s; animation-duration: 5.0s"></span>
+<span class="sparkle" style="left: 19.5%; top: 95.2%; width: 1px; height: 1px; background: rgba(200,205,255,0.55); box-shadow: 0 0 2px rgba(200,205,255,0.55); animation-delay: -8.1s; animation-duration: 8.6s"></span>
+<span class="sparkle" style="left: 70.1%; top: 2.9%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -0.4s; animation-duration: 6.8s"></span>
+<span class="sparkle" style="left: 69.6%; top: 24.5%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -5.4s; animation-duration: 4.0s"></span>
+<span class="sparkle" style="left: 31.3%; top: 45.5%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -3.7s; animation-duration: 4.2s"></span>
+<span class="sparkle" style="left: 78.6%; top: 81.6%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -0.5s; animation-duration: 4.5s"></span>
+<span class="sparkle" style="left: 40.5%; top: 55.1%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -8.0s; animation-duration: 8.1s"></span>
+<span class="sparkle" style="left: 91.7%; top: 87.6%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -5.8s; animation-duration: 3.9s"></span>
+<span class="sparkle" style="left: 89.2%; top: 74.2%; width: 1.5px; height: 1.5px; background: rgba(200,205,255,0.8); box-shadow: 0 0 5px rgba(200,205,255,0.55); animation-delay: -1.9s; animation-duration: 3.8s"></span>
+<span class="sparkle" style="left: 80.9%; top: 60.4%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -4.7s; animation-duration: 7.9s"></span>
+<span class="sparkle" style="left: 34.1%; top: 27.4%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -3.0s; animation-duration: 6.9s"></span>
+<span class="sparkle" style="left: 88.2%; top: 8.0%; width: 1px; height: 1px; background: rgba(217,200,166,0.55); box-shadow: 0 0 2px rgba(217,200,166,0.55); animation-delay: -5.1s; animation-duration: 7.2s"></span>
+<span class="sparkle" style="left: 19.6%; top: 27.4%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -0.4s; animation-duration: 6.2s"></span>
+<span class="sparkle" style="left: 67.7%; top: 65.0%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -1.0s; animation-duration: 8.6s"></span>
+<span class="sparkle" style="left: 53.8%; top: 41.0%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -7.3s; animation-duration: 6.4s"></span>
+<span class="sparkle" style="left: 8.7%; top: 82.1%; width: 1px; height: 1px; background: rgba(200,205,255,0.55); box-shadow: 0 0 2px rgba(200,205,255,0.55); animation-delay: -0.4s; animation-duration: 5.4s"></span>
+<span class="sparkle" style="left: 53.2%; top: 62.6%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -7.1s; animation-duration: 6.2s"></span>
+<span class="sparkle" style="left: 16.9%; top: 84.4%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -9.1s; animation-duration: 7.2s"></span>
+<span class="sparkle" style="left: 22.3%; top: 77.2%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -5.3s; animation-duration: 8.5s"></span>
+<span class="sparkle" style="left: 96.1%; top: 39.2%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -9.4s; animation-duration: 7.9s"></span>
+<span class="sparkle" style="left: 2.1%; top: 35.5%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -6.1s; animation-duration: 7.7s"></span>
+<span class="sparkle" style="left: 64.4%; top: 16.8%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -5.4s; animation-duration: 8.3s"></span>
+<span class="sparkle" style="left: 21.3%; top: 98.8%; width: 1px; height: 1px; background: rgba(217,200,166,0.55); box-shadow: 0 0 2px rgba(217,200,166,0.55); animation-delay: -7.8s; animation-duration: 7.6s"></span>
+<span class="sparkle" style="left: 87.5%; top: 36.5%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -4.1s; animation-duration: 4.5s"></span>
+<span class="sparkle" style="left: 53.9%; top: 80.9%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -1.3s; animation-duration: 3.6s"></span>
+<span class="sparkle" style="left: 42.4%; top: 57.9%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -6.7s; animation-duration: 4.7s"></span>
+<span class="sparkle" style="left: 11.5%; top: 91.9%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -9.0s; animation-duration: 6.3s"></span>
+<span class="sparkle" style="left: 13.0%; top: 24.5%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -6.4s; animation-duration: 7.7s"></span>
+<span class="sparkle" style="left: 74.6%; top: 64.8%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -4.3s; animation-duration: 5.6s"></span>
+<span class="sparkle" style="left: 49.0%; top: 27.0%; width: 1px; height: 1px; background: rgba(200,205,255,0.55); box-shadow: 0 0 2px rgba(200,205,255,0.55); animation-delay: -4.6s; animation-duration: 3.7s"></span>
+<span class="sparkle" style="left: 81.6%; top: 58.5%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -7.4s; animation-duration: 7.5s"></span>
+<span class="sparkle" style="left: 98.4%; top: 37.9%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -0.0s; animation-duration: 7.2s"></span>
+<span class="sparkle" style="left: 58.0%; top: 57.5%; width: 2.5px; height: 2.5px; background: rgba(246,241,228,0.95); box-shadow: 0 0 10px rgba(246,241,228,0.55); animation-delay: -2.0s; animation-duration: 4.7s"></span>
+<span class="sparkle" style="left: 72.9%; top: 80.6%; width: 1px; height: 1px; background: rgba(217,200,166,0.55); box-shadow: 0 0 2px rgba(217,200,166,0.55); animation-delay: -0.5s; animation-duration: 5.5s"></span>
+<span class="sparkle" style="left: 82.0%; top: 50.0%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -3.9s; animation-duration: 7.0s"></span>
+<span class="sparkle" style="left: 59.7%; top: 68.9%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -7.5s; animation-duration: 5.6s"></span>
+<span class="sparkle" style="left: 25.5%; top: 77.6%; width: 1.5px; height: 1.5px; background: rgba(200,205,255,0.8); box-shadow: 0 0 5px rgba(200,205,255,0.55); animation-delay: -9.3s; animation-duration: 4.6s"></span>
+<span class="sparkle" style="left: 84.1%; top: 88.3%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -3.1s; animation-duration: 7.0s"></span>
+<span class="sparkle" style="left: 15.3%; top: 82.5%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -6.8s; animation-duration: 5.1s"></span>
+<span class="sparkle" style="left: 22.4%; top: 21.3%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -7.1s; animation-duration: 4.7s"></span>
+<span class="sparkle" style="left: 68.3%; top: 33.8%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -3.7s; animation-duration: 4.6s"></span>
+<span class="sparkle" style="left: 14.8%; top: 6.7%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -4.1s; animation-duration: 4.2s"></span>
+<span class="sparkle" style="left: 87.3%; top: 65.2%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -7.2s; animation-duration: 6.8s"></span>
+<span class="sparkle" style="left: 44.5%; top: 50.1%; width: 2.5px; height: 2.5px; background: rgba(200,205,255,0.95); box-shadow: 0 0 10px rgba(200,205,255,0.55); animation-delay: -3.7s; animation-duration: 7.0s"></span>
+<span class="sparkle" style="left: 63.3%; top: 36.8%; width: 1px; height: 1px; background: rgba(217,200,166,0.55); box-shadow: 0 0 2px rgba(217,200,166,0.55); animation-delay: -7.5s; animation-duration: 7.0s"></span>
+<span class="sparkle" style="left: 45.8%; top: 51.4%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -7.9s; animation-duration: 3.6s"></span>
+<span class="sparkle" style="left: 64.0%; top: 45.6%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -5.9s; animation-duration: 6.7s"></span>
+<span class="sparkle" style="left: 9.5%; top: 49.0%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -8.0s; animation-duration: 5.3s"></span>
+<span class="sparkle" style="left: 33.2%; top: 22.1%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -1.9s; animation-duration: 4.3s"></span>
+<span class="sparkle" style="left: 62.2%; top: 84.0%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -1.1s; animation-duration: 6.4s"></span>
+<span class="sparkle" style="left: 12.3%; top: 40.7%; width: 1.5px; height: 1.5px; background: rgba(200,205,255,0.8); box-shadow: 0 0 5px rgba(200,205,255,0.55); animation-delay: -2.0s; animation-duration: 7.3s"></span>
+<span class="sparkle" style="left: 53.8%; top: 9.3%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -6.0s; animation-duration: 4.0s"></span>
+<span class="sparkle" style="left: 21.0%; top: 57.5%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -5.2s; animation-duration: 7.1s"></span>
+<span class="sparkle" style="left: 1.9%; top: 30.7%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -9.1s; animation-duration: 5.5s"></span>
+<span class="sparkle" style="left: 77.9%; top: 4.4%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -8.9s; animation-duration: 7.7s"></span>
+<span class="sparkle" style="left: 57.8%; top: 18.8%; width: 2.5px; height: 2.5px; background: rgba(217,200,166,0.95); box-shadow: 0 0 10px rgba(217,200,166,0.55); animation-delay: -0.8s; animation-duration: 8.8s"></span>
+<span class="sparkle" style="left: 77.1%; top: 71.5%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -1.6s; animation-duration: 5.4s"></span>
+<span class="sparkle" style="left: 66.1%; top: 65.3%; width: 1px; height: 1px; background: rgba(200,205,255,0.55); box-shadow: 0 0 2px rgba(200,205,255,0.55); animation-delay: -8.0s; animation-duration: 3.8s"></span>
+<span class="sparkle" style="left: 29.2%; top: 9.9%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -7.9s; animation-duration: 7.6s"></span>
+<span class="sparkle" style="left: 15.6%; top: 31.2%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -6.6s; animation-duration: 5.9s"></span>
+<span class="sparkle" style="left: 23.7%; top: 37.7%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -4.3s; animation-duration: 7.3s"></span>
+<span class="sparkle" style="left: 62.5%; top: 47.4%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -3.6s; animation-duration: 4.6s"></span>
+<span class="sparkle" style="left: 49.5%; top: 30.8%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -1.9s; animation-duration: 8.5s"></span>
+<span class="sparkle" style="left: 42.7%; top: 20.6%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -2.1s; animation-duration: 8.3s"></span>
+<span class="sparkle" style="left: 34.0%; top: 66.4%; width: 1px; height: 1px; background: rgba(200,205,255,0.55); box-shadow: 0 0 2px rgba(200,205,255,0.55); animation-delay: -6.5s; animation-duration: 6.0s"></span>
+<span class="sparkle" style="left: 73.2%; top: 52.8%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -2.8s; animation-duration: 6.8s"></span>
+<span class="sparkle" style="left: 82.5%; top: 68.8%; width: 1px; height: 1px; background: rgba(217,200,166,0.55); box-shadow: 0 0 2px rgba(217,200,166,0.55); animation-delay: -3.3s; animation-duration: 8.4s"></span>
+<span class="sparkle" style="left: 83.9%; top: 15.3%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -7.7s; animation-duration: 7.2s"></span>
+<span class="sparkle" style="left: 95.5%; top: 87.1%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -10.0s; animation-duration: 5.3s"></span>
+<span class="sparkle" style="left: 38.2%; top: 96.7%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -4.0s; animation-duration: 6.9s"></span>
+<span class="sparkle" style="left: 27.7%; top: 27.2%; width: 1.5px; height: 1.5px; background: rgba(246,241,228,0.8); box-shadow: 0 0 5px rgba(246,241,228,0.55); animation-delay: -6.1s; animation-duration: 7.6s"></span>
+<span class="sparkle" style="left: 78.4%; top: 86.5%; width: 1.5px; height: 1.5px; background: rgba(200,205,255,0.8); box-shadow: 0 0 5px rgba(200,205,255,0.55); animation-delay: -8.2s; animation-duration: 8.9s"></span>
+<span class="sparkle" style="left: 49.9%; top: 69.8%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -9.7s; animation-duration: 7.1s"></span>
+<span class="sparkle" style="left: 43.2%; top: 66.1%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -1.3s; animation-duration: 5.6s"></span>
+<span class="sparkle" style="left: 14.4%; top: 1.4%; width: 1px; height: 1px; background: rgba(246,241,228,0.55); box-shadow: 0 0 2px rgba(246,241,228,0.55); animation-delay: -4.5s; animation-duration: 7.7s"></span>
+</div>
+<div class="glow" style="left: -10%; top: 58%; width: 40vw; height: 40vw; max-width: 600px; max-height: 600px; background: radial-gradient(circle, rgba(217,200,166,0.14), rgba(217,200,166,0) 68%); filter: blur(70px); animation-delay: -3s"></div>
+<div class="glow" style="right: -12%; top: 74%; width: 44vw; height: 44vw; max-width: 640px; max-height: 640px; background: radial-gradient(circle, rgba(130,120,220,0.16), rgba(130,120,220,0) 68%); filter: blur(80px); animation-delay: -9s"></div>
+<div class="glow" style="left: -8%; top: 8%; width: 46vw; height: 46vw; max-width: 680px; max-height: 680px; background: radial-gradient(circle, rgba(217,200,166,0.20), rgba(217,200,166,0) 68%); filter: blur(60px)"></div>
+<div class="glow" style="right: -10%; top: -6%; width: 42vw; height: 42vw; max-width: 620px; max-height: 620px; background: radial-gradient(circle, rgba(130,120,220,0.22), rgba(130,120,220,0) 68%); filter: blur(70px); animation-delay: -6s"></div>
+<div class="glow" style="left: 34%; bottom: -14%; width: 38vw; height: 30vw; max-width: 560px; max-height: 440px; background: radial-gradient(circle, rgba(255,226,200,0.13), rgba(255,226,200,0) 70%); filter: blur(60px); animation-delay: -11s"></div>
+<div style="position: absolute; inset: 0; z-index: 0; pointer-events: none; background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 30%, rgba(5,5,5,0) 100%)"></div>
+<div class="nh" style="position: relative; margin: -32px -56px 0; padding: 32px 56px 0">
+<nav class="nh-nav" style="position: relative; z-index: 6">
+<div class="nh-l"><a class="nh-act" href="#">Home</a><a href="#work">Work</a><a href="About.dc.html">About</a></div>
+<div class="nh-r"><a class="nh-glass nh-sm" href="#contact">Contact me</a></div>
+</nav>
+<div class="nh-stage" onMouseMove="{{ stageMove }}" onMouseLeave="{{ stageLeave }}">
+<div class="nh-card" style="{{ cardStyle }}">
+<sc-for list="{{ slides }}" as="s" hint-placeholder-count="4">
+<div style="{{ s.style }}"><div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 36px 16px 14px; background: linear-gradient(180deg, rgba(5,5,5,0), rgba(5,5,5,0.75)); display: flex; flex-direction: column; gap: 2px"><div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #b9b4a8">{{ s.tag }}</div><div style="font-size: 17px; font-weight: 500; letter-spacing: -0.01em; color: #f6f1e4">{{ s.title }}</div></div></div>
+</sc-for>
+</div>
+<h1 class="nh-big" style="{{ nhParaT }}" aria-label="I design products people trust."><span class="nh-a nh-rv" style="animation-delay: 120ms">I design</span><span class="nh-b nh-rv" style="animation-delay: 240ms"><em>products</em></span><span class="nh-c nh-rv" style="animation-delay: 360ms">people</span><span class="nh-d nh-rv" style="animation-delay: 480ms">trust.</span></h1>
+<a class="nh-frame nh-rv" href="About.dc.html" aria-label="Learn about me" style="animation-delay: 240ms" onMouseMove="{{ nhMove }}" onMouseLeave="{{ nhLeave }}" onClick="{{ nhClick }}">
+<div class="nh-still" style="{{ nhParaP }}"><img alt="Malak Usama" src="assets/92deb208895d9c5d3ef8fcb3bfa5932d.webp"></div>
+<div class="nh-hint">Tap to meet the person behind the design</div>
+</a>
+<div class="nh-eb nh-rv"><span class="nm">Malak Usama</span><i class="ru"></i><span class="rl">Product Designer</span></div>
+<div class="nh-bl nh-rv" style="animation-delay: 360ms">
+<p class="nh-sub">Product design for lending and regulated fintech. I turn complex, regulated money journeys into ones people trust and finish.</p>
+</div>
+</div>
+<div class="nh-proof nh-rv" style="animation-delay: 480ms">
+<div><b>{{ nhS1 }}</b><span>Lending and regulated fintech</span></div>
+<div><b>{{ nhS2 }}</b><span>Shipped to real customers</span></div>
+<div><b>{{ nhS3 }}</b><span>Products designed across many regions</span></div>
+<div><b>{{ nhS4 }}</b><span>Designer, product strategist and team lead</span></div>
+</div>
+<div style="{{ nhWin }}"><div class="nh-colr" style="{{ nhImg }}"><img alt="" aria-hidden="true" src="assets/92deb208895d9c5d3ef8fcb3bfa5932d.webp"></div></div>
+<div style="{{ nhRim }}"></div>
+<div style="{{ nhRt }}">Learn<br>about me</div>
+</div>
+<div style="box-sizing: border-box; padding: 120px 0 130px; background: transparent; color: #f6f1e4; font-family: Inter, system-ui, sans-serif; text-align: center">
+<div style="font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #a7a29a; margin-bottom: 36px; padding: 0 20px">Trusted by</div>
+<div style="position: relative; overflow: hidden; text-align: left; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)">
+<div class="logo-track" style="font-size: 15px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: #8d8a84">
+<div style="display: flex; align-items: center; gap: 64px; padding-right: 64px"><span>Revolut</span><span>Vodafone</span><span>Deloitte</span><span>Klivvr</span><span>dopay</span><span>Vocus</span><span>Shoreditch Design Studio</span><span>Janeplan</span></div>
+<div style="display: flex; align-items: center; gap: 64px; padding-right: 64px" aria-hidden="true"><span>Revolut</span><span>Vodafone</span><span>Deloitte</span><span>Klivvr</span><span>dopay</span><span>Vocus</span><span>Shoreditch Design Studio</span><span>Janeplan</span></div>
+</div>
+</div>
+<section id="work" style="position: relative; z-index: 6; margin: 0 -56px; padding: 110px 56px 80px; background: transparent; color: #f6f1e4; font-family: Inter, system-ui, sans-serif; overflow: hidden" onMouseMove="{{ fsMove }}" onMouseLeave="{{ fsLeave }}">
+<div style="{{ fsDot }}"></div>
+<div style="position: relative; height: clamp(520px, 41vw, 600px); text-align: left">
+<sc-for list="{{ fsCards }}" as="f" hint-placeholder-count="4">
+<div style="{{ f.wrapStyle }}">
+<div style="{{ f.artStyle }}"><div style="{{ f.ringStyle }}"></div><div style="{{ f.ring2Style }}"></div><div style="{{ f.p0 }}"></div><div style="{{ f.p1 }}"></div><div style="{{ f.p2 }}"></div><div style="{{ f.glass2Style }}"></div><div style="{{ f.glassStyle }}"><div style="{{ f.g1s }}">{{ f.g1 }}</div><div style="{{ f.g2s }}">{{ f.g2 }}</div><div style="{{ f.g3s }}">{{ f.g3 }}</div></div><div style="{{ f.tagStyle }}">{{ f.tag }}</div></div>
+<div style="{{ f.titleStyle }}">{{ f.name }}</div>
+<div style="{{ f.descStyle }}">{{ f.desc }}</div>
+<a href="{{ f.href }}" style="{{ f.btnStyle }}">{{ f.btnLabel }}</a>
+</div>
+</sc-for>
+<div style="position: absolute; right: 0; bottom: 0; display: flex; gap: 12px">
+<button type="button" aria-label="Previous project" onClick="{{ fsPrev }}" style="width: 56px; height: 56px; border-radius: 50%; border: 0; background: #2a2a2c; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"></path><path d="M11 6l-6 6 6 6"></path></svg></button>
+<button type="button" aria-label="Next project" onClick="{{ fsNext }}" style="width: 56px; height: 56px; border-radius: 50%; border: 0; background: #2a2a2c; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></button>
+</div>
+</div>
+</section>
+<section style="position: relative; z-index: 6; margin: 0 -56px; padding: 110px 56px 40px; background: transparent; color: #f6f1e4; font-family: Inter, system-ui, sans-serif; overflow: hidden; text-align: left" onMouseEnter="{{ rvEnter }}" onMouseLeave="{{ rvLeave }}">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<div style="font-family: 'Inter Tight', Inter, system-ui, sans-serif; font-weight: 300; font-size: clamp(30px, 3.2vw, 46px); line-height: 1.1; letter-spacing: -0.03em">Reviews</div>
+<div style="display: flex; gap: 12px">
+<button type="button" aria-label="Previous reviews" onClick="{{ rvPrev }}" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.04); display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6f1e4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"></path><path d="M11 6l-6 6 6 6"></path></svg></button>
+<button type="button" aria-label="Next reviews" onClick="{{ rvNext }}" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.04); display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6f1e4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></button>
+</div>
+</div>
+<div style="margin-top: 48px; overflow: hidden">
+<div style="{{ rvTrack }}">
+<sc-for list="{{ rvCards }}" as="v" hint-placeholder-count="7">
+<div style="flex: 0 0 calc((100% - 48px) / 3); box-sizing: border-box; padding: 32px; border: 1px solid rgba(255,255,255,0.12); border-radius: 24px; background: rgba(255,255,255,0.03); display: flex; flex-direction: column; justify-content: space-between; gap: 32px; min-height: 360px">
+<div style="font-family: 'Inter Tight', Inter, system-ui, sans-serif; font-weight: 300; font-size: 18px; line-height: 1.55; letter-spacing: -0.01em; color: #e8e3d8; white-space: pre-line">{{ v.text }}</div>
+<div style="display: flex; align-items: center; gap: 14px">
+<div style="{{ v.badge }}">{{ v.initial }}</div>
+<div style="display: flex; flex-direction: column; gap: 3px"><div style="font-size: 15px; font-weight: 500">{{ v.name }}</div><div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8d8a84">{{ v.role }}</div></div>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+<section style="position: relative; z-index: 6; margin: 0 -56px; padding: 110px 56px 40px; color: #f6f1e4; font-family: Inter, system-ui, sans-serif; text-align: left"><div style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #8d8a84">How I work</div><div style="margin-top: 14px"><div style="font-family: 'Inter Tight', Inter, sans-serif; font-weight: 300; font-size: clamp(34px, 4vw, 60px); line-height: 1.08; letter-spacing: -0.03em">Four habits behind <span style="font-style: italic; color: {{accent}}">every project</span></div></div><div class="hw" onMouseLeave="{{ hwLeave }}"><sc-for list="{{ hwCards }}" as="c" hint-placeholder-count="4"><div style="{{ c.box }}" onMouseEnter="{{ c.enter }}" onClick="{{ c.enter }}"><div style="{{ c.num }}">{{ c.n }}</div><div><div style="{{ c.title }}">{{ c.t }}</div><div class="hwt" style="{{ c.text }}">{{ c.d }}</div></div></div></sc-for></div></section>
+<section style="position: relative; z-index: 6; margin: 0 -56px; padding: 150px 0 80px; background: transparent; color: #f6f1e4; font-family: Inter, system-ui, sans-serif; overflow: hidden">
+<div style="padding: 0 56px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-family: 'Inter Tight', Inter, system-ui, sans-serif; font-weight: 300; font-size: clamp(30px, 3.2vw, 46px); line-height: 1.1; letter-spacing: -0.03em">Beyond client work</div>
+</div>
+<div style="position: relative; height: 470px; margin-top: 28px; cursor: crosshair; user-select: none; -webkit-user-select: none; touch-action: pan-y" onMouseDown="{{ pDown }}" onMouseMove="{{ pMove }}" onMouseUp="{{ pUp }}" onMouseLeave="{{ pLeave }}" onWheel="{{ pWheel }}">
+<sc-for list="{{ pCards }}" as="c" hint-placeholder-count="10">
+<div style="{{ c.style }}"><div style="{{ c.artStyle }}"></div><div style="{{ c.badgeStyle }}">{{ c.badge }}</div><div style="position: absolute; left: 14px; bottom: 12px; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(246,241,228,0.55)">{{ c.note }}</div></div>
+</sc-for>
+</div>
+<div style="text-align: center; margin-top: 8px; display: flex; flex-direction: column; gap: 6px; align-items: center">
+<div style="font-size: 20px; font-weight: 500; letter-spacing: -0.01em">{{ pTitle }}</div>
+<div style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #8d8a84">{{ pCat }}</div>
+<div style="{{ pStatusStyle }}">{{ pStatus }}</div>
+</div>
+<div style="padding: 0 56px; margin-top: 40px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; font-size: 12px; letter-spacing: 0.1em; color: #a7a29a">
+<div>( Drag )</div>
+<div style="display: flex; align-items: center; gap: 14px"><span>{{ pNum }}</span><span style="position: relative; width: 110px; height: 1px; background: rgba(255,255,255,0.18)"><span style="{{ pBar }}"></span></span><span>{{ pTotal }}</span></div>
+<div></div>
+</div>
+</section>
+<footer id="contact" style="text-align: left; position: relative; z-index: 6; margin: 0 -56px; padding: 140px 56px 40px; color: #f6f1e4; font-family: Inter, system-ui, sans-serif; border-top: 1px solid rgba(255,255,255,0.1); overflow: hidden">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'Inter Tight', Inter, sans-serif; font-weight: 300; font-size: clamp(48px, 6vw, 96px); line-height: 1; letter-spacing: -0.04em">Have a project?</div>
+<div style="font-family: 'Inter Tight', Inter, sans-serif; font-weight: 300; font-style: italic; font-size: clamp(48px, 6vw, 96px); line-height: 1; letter-spacing: -0.04em; color: #D9C8A6">Tell me about it</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px">
+<input type="text" placeholder="First name" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
+<input type="text" placeholder="Last name" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
+<input type="email" placeholder="Email" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
+<input type="tel" placeholder="Phone number" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
+</div>
+<textarea placeholder="Tell me about it" rows="5" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none; resize: none"></textarea>
+<a href="mailto:Malak@mpavida.com" style="align-self: flex-start; padding: 16px 34px; border-radius: 999px; background: #f6f1e4; color: #0b0b0e; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500">Send</a>
+</div>
+</div>
+<div style="margin: 110px -56px 0; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 30px 0">
+<div class="logo-track" style="font-family: 'Inter Tight', Inter, sans-serif; font-weight: 300; font-size: clamp(56px, 7vw, 108px); letter-spacing: -0.03em; line-height: 1; text-transform: uppercase; color: #f6f1e4">
+<div style="display: flex; align-items: center; gap: 56px; padding-right: 56px"><span>Want to work with me?</span><span>Want to work with me?</span></div>
+<div style="display: flex; align-items: center; gap: 56px; padding-right: 56px" aria-hidden="true"><span>Want to work with me?</span><span>Want to work with me?</span></div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 56px; margin-top: 80px">
+<div style="display: flex; flex-direction: column; gap: 14px"><div style="font-family: 'Inter Tight', Inter, sans-serif; font-weight: 500; font-size: 28px; letter-spacing: -0.03em">Malak Usama</div><div style="font-size: 15px; line-height: 1.6; color: #8d8a84; max-width: 320px">Product design for lending and regulated fintech.</div></div>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px"><div style="font-weight: 500; color: #f6f1e4">Contact</div><a href="mailto:Malak@mpavida.com">E: Malak@mpavida.com</a></div>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px"><div style="font-weight: 500; color: #f6f1e4">Lets be friends</div><a href="https://www.linkedin.com/in/malakusama/">LinkedIn</a><a href="https://www.instagram.com/mpavida/">Instagram</a></div>
+</div>
+<div style="margin-top: 80px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 12px; letter-spacing: 0.1em; color: #6f6c66"><span>&copy; 2026 Malak Usama</span><span>Back to top</span></div>
+</footer>
+</div>
+<dc-import name="AskMalak" hint-size="0px,0px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#D9C8A6","options":["#D9C8A6","#F6F1E4","#7AA2FF"]},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this._h = { cx: 0, cy: 0, tx: 0, ty: 0, r: 0, tr: 0, open: false, go: false };
+    this._c0 = Date.now();
+    this._hT = setInterval(() => {
+      const h = this._h, st = {};
+      const cp = Math.min(1, (Date.now() - this._c0) / 1400);
+      if (cp !== this.state.hc) st.hc = cp;
+      if (!h.open) { h.cx += (h.tx - h.cx) * 0.2; h.cy += (h.ty - h.cy) * 0.2; }
+      h.r += (h.tr - h.r) * (h.open ? 0.075 : 0.18);
+      if (Math.abs(h.tr - h.r) < 0.4) h.r = h.tr;
+      if (Math.abs((this.state.hr ?? 0) - h.r) > 0.05 || Math.abs((this.state.hcx ?? 0) - h.cx) > 0.05 || Math.abs((this.state.hcy ?? 0) - h.cy) > 0.05) { st.hr = h.r; st.hcx = h.cx; st.hcy = h.cy; }
+      if (Object.keys(st).length) this.setState(st);
+      if (h.open && h.r === h.tr && !h.go) { h.go = true; setTimeout(() => { const g = document.getElementById('nh-go'); if (g) g.click(); }, 150); }
+    }, 16);
+    this._esc = (e) => { if (e.key === 'Escape') this._nhClose(); };
+    window.addEventListener('keydown', this._esc);
+    this._rvT = setInterval(() => { if (!this._rvHover) this.setState({ rv: ((this.state.rv ?? 0) + 1) % 13 }); }, 4500);
+    this._hwT = setInterval(() => { if (!this._hwHold) this.setState({ hw: ((this.state.hw ?? 0) + 1) % 4 }); }, 3600);
+    this._t = setInterval(() => this.setState({ idx: ((this.state.idx ?? 0) + 1) % 3 }), 2800);
+    this._p = { tgt: 0, off: 0, drag: false, hover: false, lx: 0 };
+    this._pt = setInterval(() => {
+      const p = this._p;
+      if (!p.drag && !p.hover) p.tgt += 0.7;
+      const next = p.off + (p.tgt - p.off) * 0.14;
+      if (Math.abs(next - p.off) > 0.02) { p.off = next; this.setState({ poff: next }); }
+    }, 40);
+  }
+  componentWillUnmount() {
+    clearInterval(this._hT);
+    window.removeEventListener('keydown', this._esc);
+    clearInterval(this._t);
+    clearInterval(this._rvT);
+    clearInterval(this._hwT);
+    clearInterval(this._pt);
+  }
+  _nhGeo() {
+    const root = document.querySelector('.nh'), fr = document.querySelector('.nh-frame');
+    if (!root || !fr) return null;
+    return { rr: root.getBoundingClientRect(), fb: fr.getBoundingClientRect() };
+  }
+  _nhAlign(g) {
+    this.setState({ fl: g.fb.left - g.rr.left, ft: g.fb.top - g.rr.top, hfw: g.fb.width, hfh: g.fb.height });
+  }
+  _nhOpen(x, y) {
+    const h = this._h, g = this._nhGeo();
+    if (!g || h.open) return;
+    if (x != null) { h.cx = h.tx = x - g.rr.left; h.cy = h.ty = y - g.rr.top; }
+    this._nhAlign(g);
+    h.open = true;
+    h.tr = Math.hypot(Math.max(h.cx, g.rr.width - h.cx), Math.max(h.cy, g.rr.height - h.cy)) + 40;
+    this.setState({ hopen: true });
+  }
+  _nhClose() {
+    const h = this._h;
+    if (!h || !h.open) return;
+    h.open = false; h.go = false; h.tr = 0;
+    this.setState({ hopen: false });
+  }
+  renderVals() {
+    const P = this._p || { tgt: 0, off: 0, drag: false, hover: false, lx: 0 };
+    const N = 10, step = 300, total = N * step, off = this.state.poff ?? 0;
+    const proj = [
+      { t: 'Money Health Check', img: '25c2c5bfe47d744c1221661b0fd51d3f.jpg', c: 'Planning tool', n: 'Image placeholder', soon: true, h: 320 },
+      { t: 'Designing Money', img: 'de9d02ffa581343b15ea8f708f9ee9a9.jpg', c: 'Course: product design for lending and regulated fintech', n: 'Image placeholder', soon: true, h: 280 },
+      { t: 'Heal', img: '154b990be81b9cedf5738d0a9374f00f.jpg', c: 'Founder project', n: 'Image placeholder', soon: true, h: 285 },
+      { t: 'Goodground', img: 'bd8700f2b587d052789888e2eb93b3cf.jpg', c: 'Money planning for the UAE', n: 'Image placeholder', h: 150 },
+      { t: 'Lending teardowns', img: '4c72cd2fbb1f2a691be3b1cdf5b723cd.jpg', c: 'Redesigns of real loan and mortgage flows', n: 'Image placeholder', soon: true, h: 160 },
+      { t: 'Plain language playbook', img: '98ed7f08c6c1b4103f72301269ef6ab2.jpg', c: 'Free guide for regulated copy', n: 'Image placeholder', soon: true, h: 350 },
+      { t: 'Ask Malak', img: 'e8754d8890a2c92252d958fcfb317c7d.jpg', c: 'Chat about my work', n: 'Image placeholder', soon: true, h: 240 },
+      { t: 'Red Route', img: 'e5a9a91fb3b0f1562fa9341db1a2cf42.jpg', c: 'Podcast with Mai', n: 'Image placeholder', soon: true, h: 5 },
+      { t: 'Lending UI kit', img: 'd0f2fc5c4776ff3adecba7c452a95ceb.jpg', c: 'Free Figma kit for regulated flows', n: 'Image placeholder', soon: true, h: 200 },
+      { t: 'Flow review clinic', img: '52527d571eeac752b59605ce30d19aaf.jpg', c: 'Send a flow, get a short video critique', n: 'Image placeholder', soon: true, h: 90 }
+    ];
+    let best = 0, bestD = 1e9;
+    const pCards = proj.map((d, i) => {
+      let x = (((i * step - off) % total) + total * 1.5) % total - total / 2;
+      const ax = Math.abs(x);
+      if (ax < bestD) { bestD = ax; best = i; }
+      const g = Math.min(1, ax / 140), bl = Math.min(7, Math.max(0, (ax - 380) / 70));
+      const rot = Math.max(-38, Math.min(38, x / 20)), sc = 1 - Math.min(0.2, ax / 3600);
+      const o = Math.max(0.15, 1 - Math.max(0, ax - 520) / 400);
+      const style = 'position:absolute;left:50%;top:50%;width:240px;height:320px;margin:-160px 0 0 -120px;border-radius:6px;overflow:hidden;will-change:transform;transform:translateX(' + x.toFixed(1) + 'px) perspective(900px) rotateY(' + rot.toFixed(1) + 'deg) scale(' + sc.toFixed(3) + ');filter:grayscale(' + g.toFixed(2) + ') brightness(' + (1 - g * 0.35).toFixed(2) + ') blur(' + bl.toFixed(1) + 'px);opacity:' + o.toFixed(2);
+      const artStyle = d.img ? 'position:absolute;inset:0;background:#07070b url(assets/' + d.img + ') center/cover no-repeat' : 'position:absolute;inset:0;background:radial-gradient(80% 60% at 30% 25%, hsla(' + d.h + ',70%,62%,0.9), hsla(' + d.h + ',60%,30%,0.9) 55%, #0b0b0e 100%)';
+      const badgeStyle = d.soon ? 'position:absolute;left:14px;top:14px;padding:6px 11px;border-radius:999px;background:rgba(7,7,11,0.62);border:1px solid rgba(255,255,255,0.22);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#f6f1e4' : 'display:none';
+      return { style, artStyle, note: d.img ? '' : d.n, badge: d.soon ? 'Coming soon' : '', badgeStyle };
+    });
+    const cur = proj[best];
+    const frac = (((off % total) + total) % total) / total;
+    const pBar = 'position:absolute;left:0;top:0;height:1px;background:#f6f1e4;width:' + (frac * 100).toFixed(1) + '%';
+    const pDown = (e) => { P.drag = true; P.lx = e.clientX; };
+    const pMove = (e) => { P.hover = true; if (P.drag) { P.tgt -= (e.clientX - P.lx) * 1.4; P.lx = e.clientX; } };
+    const pUp = () => { P.drag = false; };
+    const pLeave = () => { P.drag = false; P.hover = false; };
+    const pWheel = (e) => { P.tgt += (e.deltaX || 0); };
+    const wk = this.state.wk ?? 0;
+    const wkData = [
+      { t: 'Case study one', c: 'Lending, product design', h: 285 },
+      { t: 'Case study two', c: 'Mortgages, regulated fintech', h: 215 },
+      { t: 'Case study three', c: 'Category', h: 330 },
+      { t: 'Case study four', c: 'Category', h: 175 }
+    ];
+    const wkCards = wkData.map((d, i) => ({
+      title: d.t, cat: d.c,
+      cardStyle: 'flex:0 0 calc(50% - 12px);box-sizing:border-box;text-align:left;margin-top:0',
+      artStyle: 'position:relative;width:100%;aspect-ratio:16/10;border-radius:24px;overflow:hidden;background:radial-gradient(80% 70% at 30% 25%, hsla(' + d.h + ',55%,48%,0.85), hsla(' + d.h + ',50%,22%,0.9) 55%, #0b0b0e 100%)'
+    }));
+    const wkTrackStyle = 'display:flex;gap:24px;align-items:flex-start;transition:transform .6s cubic-bezier(.22,.8,.24,1);transform:translateX(calc(' + (-wk) + ' * (100% + 24px)))';
+    const arrowBase = 'width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,0.22);background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;transition:opacity .2s ease;';
+    const wkPrevStyle = arrowBase + 'opacity:' + (wk === 0 ? 0.35 : 1);
+    const wkNextStyle = arrowBase + 'opacity:' + (wk === 1 ? 0.35 : 1);
+    const wkPrev = () => this.setState({ wk: 0 });
+    const wkNext = () => this.setState({ wk: 1 });
+    const rvData = [["Felipe Braga", "Product @ RemoFirst", "Malak is a great professional. I worked directly with her while we were designing the mortgages product at Revolut. She is a great thinker and executor, always highly engaged in discussions and bringing valuable perspectives to the table. She has a great ability to balance business needs with user problems, which made her a fantastic person to work with.", "887733544312e8c0e14a1d14477ee1bc.png"], ["Jo Chang", "UX Designer at Revolut", "I worked with Malak on the Credit team over the past year, where she was designing for the mortgage experience. She’s great at working in a fast-paced environment, managing stakeholder feedback and delivering quality design at speed.\n\nEven though we worked in a high-pressure environment with a rapid delivery pace, she always took the time to think deeply about the problem space and bring strategic thinking to her work. She’s also a supportive teammate who is always happy to share feedback and support her peers.\n\nI really enjoyed working with Malak. She’s an incredible designer with strong craft and strategic thinking, who can balance pressure, speed and quality really well.", "f270513d4652278e43ca1e6e3a2e4f11.png"], ["Alex Priemko", "Product manager at Revolut", "I really enjoyed working with Malak. We worked together on purpose loans, a loan calculator, and several ideas for new credit products.\n\nShe’s very good at taking something complex and turning it into a simple, clear experience. She also has strong product thinking, asks the right questions, and always brings useful ideas to the discussion.\n\nOn top of that, she’s easy to work with, reliable, and a great partner for the whole team. I’d happily work with her again.", "5ffca97a312c9ad0ce0f7a0ce712b01c.png"], ["Una Barrett", "Senior Product and Operations Manager at Revolut", "Impressive performance in the workshop today, a really steady hand for a new joiner! Calm and controlled, it was great! Well done and thank you for your commitment to our mortgages product. I know end of quarter can suck with demands, but having a teammate like you makes it easier!!", "4b37f28745abeb9d5907df876fbb7d2d.jpg"], ["Samah El-Naggar", "Marketing Director at dopay", "I was working with Malak on revamping the dopay website. She brought a great balance of creativity, structure, and user centric thinking to the project. From the very beginning, she took the time to deeply understand our brand, our audience, competitors and the complexity of our product, then translated that into a clean, intuitive, and modern design.\n\nHer ability to combine UX strategy elevated the project far beyond our expectations. She was organized, punctual, proactive, collaborative, and always open to feedback. Thanks to her efforts, we will be having a website that not only reflects dopay’s brand identity but also delivers a seamless experience to our users.\n\nI would highly recommend Malak to any team looking for a talented, reliable, and thoughtful Senior product designer. She is truly a pleasure to work with, keep up the great work Malak!", "b2b8d4f1d221194ea442322d8a3f053c.png"], ["Monique Esplin", "Partner Sales Manager, Amazon Web Services (AWS)", "Malak, has a sound understanding of design principles and can take a project from concept to delivery with ease. She is not afraid to question and always looks for improvements to the customer experience.", "c4696cdc5c05474481e259cc702271f6.png"], ["Will Gregson", "Creative Director at Shoreditch Design", "I collaborated with Malak for a couple of years at Shoreditch Design Studio. Throughout our time together, she consistently demonstrated a fantastic eye for design, complemented by strong UX/UI skills. In addition, Malak proved to be an invaluable asset to the team, showcasing excellent communication skills in direct interactions with clients.", "a6a6c58901ac96602bb07f2d89148387.png"], ["Adele Brizzi", "UX Designer", "I worked with Malak on a team project, she was a great team member and proposed a number of valuable ideas throughout the project. She took responsibility for decisions and develop a hi -quality prototype to deliver to the client. Would love to work with her again.", "7fd9da5d348c25449587bb2ff7ef4068.png"], ["Priya Venugopal", "Marketing Coordinator | Graphic Designer | Product Designer (UX/UI)", "I worked with Malak on couple of projects. She has an excellent leadership skills when it comes to managing a project and team. She consistently demonstrated her solid work ethic and problem solving skills throughout the project. She is a great asset to any UX team!", "e709a4705f7cd1ae9e1852e232b326d1.png"], ["Pia Uch", "Product Designer @NAB", "I worked with Malak on the Collabor8 Thinkspace project. She’s a driven, ambitious individual with a strong enthusiasm for the project. A skilled UX and UI designer that can turn a concept into reality upon client requests.\n\nMalak was dedicated to delivering high-quality works. She’s truly a user experience professional, knowing and working with Malak is a very pleasurable experience. Malak has an impressive work ethic that I would recommend her to any team!", "2d68edbea52d326c649cf30b9db08bbe.png"], ["Aidan Street", "Account Manager at me&u", "I worked with Malak on a UX team project for Collabor8 Thinkspace. From the outset I was impressed by her pragmatic approach to understanding and solving the problem space, always putting the user at the centre of any design thinking. She provided the team with in depth research and valuable insights early on in the project before taking a leading role in developing, designing and testing user focused solutions within design software. She communicates her thoughts clearly and always has something of value to say, this makes working with Malak really enjoyable and I would look forward to working with her again. She was a valuable member of the team and would be an asset to any UX team in the future.", "0dd7c791f87580257d77af0729ccdf1a.png"], ["Girish Sawlani", "Digital Strategy & Growth", "I managed Malak when she interned at SEO Melbourne & found her work ethic to be top notch. She was always pretty interested in learning new things & had a keen eye for User Experience. Malak was very passionate about everything she worked on & I think she's be a great addition to any team that requires help with U/X & design.", "61c2efcc07bd81d272915ae2cf87eb65.png"], ["Jack Morgan", "Product Designer | UX Designer", "Malak and I worked in the same team over two client projects at Academy Xi. In both projects she was extremely organised, kept both the projects running smoothly and worked brilliantly with everyone in the team. She worked efficiently, and contributed so much creatively, she has great ideas and a fantastic understanding of the UX process. She was excellent to work with both times, and would be a fantastic addition to any UX team.", "f46b65de6e55b2c3f6f9d9795faa72d1.png"], ["Kenny D'Souza", "UX/UI Designer | Department of Justice and Community Safety", "Malak is highly organised and insightful in the UX process, she thinks out of the box and has a keen eye for detail. She has a strong work ethic and is highly motivated individual. She is also a strong communicator with good design skills and a passion for UX.", "1964f1eeb1dd619f1fbad667914a358b.png"], ["William Humble", "UX Designer", "Malak is spectacular to work with, she works through the problem with the group and helps point out details that were overlooked, she is highly motivated and excellent communication skills. She adds great value to any Ui/Ux Team and I would highly recommend her", "47467bd57800ec65681bfab6f34e9342.png"]];
+    const rv = this.state.rv ?? 0;
+    const rvCards = rvData.map((d) => ({ name: d[0], role: d[1], text: '\u201C' + d[2] + '\u201D', initial: d[3] ? '' : d[0].charAt(0), badge: 'width:56px;height:56px;border-radius:50%;flex:0 0 56px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500;color:#14101a;background:' + (d[3] ? "#222 url('assets/" + d[3] + "') center/cover no-repeat" : (this.props.accent ?? '#D9C8A6')) }));
+    const rvTrack = 'display:flex;align-items:flex-start;gap:24px;transition:transform .7s cubic-bezier(.65,0,.35,1);transform:translateX(calc(' + (-rv) + ' * (33.3333% + 8px)))';
+    const rvPrev = () => this.setState({ rv: ((this.state.rv ?? 0) + 12) % 13 });
+    const rvNext = () => this.setState({ rv: ((this.state.rv ?? 0) + 1) % 13 });
+    const rvEnter = () => { this._rvHover = true; };
+    const rvLeave = () => { this._rvHover = false; };
+    const fsData = [
+      { n: 'Revolut', img: '17a26e5a1c0f3accbc27d294455eaa14.png', tag: 'Revolut  ·  Mortgages', d: 'Designing regulated lending journeys, from mortgages to credit card repayment, inside one of Europe\u2019s biggest fintech apps.', h: 330 },
+      { n: 'Klivvr', tag: 'Klivvr  ·  BNPL', d: 'A lending application designed to be finished. I brought lending into Klivvr\u2019s app with a guided flow that tells people where they stand at every step.', h: 268, ph: [['ad27f33593fc5360504e1983ea0f24cc.png', 22, 58, 31], ['37042e2322c0ef1803ceaf9ad1358d4b.png', 50, 26, 34], ['4f5b27d65e3cdc86b66c161271d4a9aa.png', 78, 74, 31]] },
+      { n: 'Goodground', img: 'db8c4429fd9e749769963b60b4d01b22.jpg', tag: 'Goodground  ·  Personal project', d: 'A free, private planner for people in the UAE. I researched, designed and launched it to help people see where they stand and plan a first home.', h: 120 },
+      { n: 'Janeplan', img: '764dfb19c8d957f9701adb881d78b1a0.jpg', tag: 'Jane Plan  ·  E-commerce', d: 'I redesigned Jane Plan\u2019s checkout and subscription funnel to make signing up for a meal plan feel calm and reassuring.', h: 150 },
+      { n: 'Yarda', img: '058c7d286933388ce96a061b2932e7b3.jpg', tag: 'Yarda  ·  Subscription', d: 'I redesigned Yarda\u2019s brand and funnel, turning a long lawn survey into a short, personal path to a nutrient plan.', h: 120 },
+      { n: 'dopay', img: 'a79c5d9a64eacf1fe536ada397271160.jpg', tag: 'dopay  \u00B7  Fintech website', d: 'I redesigned the dopay website, built its design system, designed the funnel and the self onboarding flow, and advised on product.', h: 270 },
+      { n: 'Logpoint', img: 'd489d3ba6c7872b99a274538ca34ac31.jpg', tag: 'Logpoint  ·  Cybersecurity', d: 'One website for two audiences. I redesigned Logpoint\u2019s digital platform for security buyers and engineers under one clear brand.', h: 200 },
+      { n: 'Heal', img: '32d3315f6293856702f757f9f451f0f5.jpg', tag: 'Heal  \u00B7  Founder project', d: 'A platform for people the system could not diagnose. I founded Heal and designed it from research to MVP, comparing treatments on cost and efficacy with booking built in.', h: 285 }
+    ];
+    const fs = this.state.fs ?? 1, M = fsData.length;
+    const ease = 'cubic-bezier(.65,0,.35,1)';
+    const pst = (d, k) => { const p = d.ph && d.ph[k]; if (!p) return 'display:none'; return 'position:absolute;left:' + p[1] + '%;top:' + p[2] + 'px;width:' + p[3] + '%;padding-bottom:' + (p[3] * 2.167) + '%;height:0;transform:translateX(-50%);border-radius:14% / 6.5%;overflow:hidden;background:#0c0c10 url(assets/' + p[0] + ') center/cover no-repeat;box-shadow:0 0 0 1px rgba(255,255,255,0.16), 0 24px 50px rgba(0,0,0,0.55)'; };
+    const fsCards = fsData.map((d, i) => {
+      let o = (((i - fs) % M) + M) % M; if (o > M / 2) o -= M;
+      const c = o === 0, side = Math.abs(o) === 1;
+      const left = o === 0 ? 31.5 : o === -1 ? 0 : o === 1 ? 74.1 : o < 0 ? -37 : 111;
+      const width = c ? 37 : 25.9;
+      return {
+        name: d.n, desc: d.d, href: d.soon ? '#' : 'CS-' + d.n.toLowerCase() + '.dc.html', btnLabel: d.soon ? 'Coming soon' : 'View case study',
+        wrapStyle: 'position:absolute;top:0;box-sizing:border-box;left:' + left + '%;width:' + width + '%;opacity:' + (c || side ? 1 : 0) + ';pointer-events:' + (c ? 'auto' : 'none') + ';transition:left .8s ' + ease + ', width .8s ' + ease + ', opacity .6s ease',
+        artStyle: 'width:100%;height:0;padding-bottom:' + (c ? 68 : 85) + '%;overflow:hidden;border-radius:24px;transition:padding-bottom .8s ' + ease + ';position:relative;background:' + (d.img ? 'linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55)), url(assets/' + d.img + ') center 42%/cover no-repeat, #0b0b0e' : '') + (d.img ? '' : 'radial-gradient(70% 60% at 78% 16%, hsla(' + d.h + ',80%,66%,0.5), rgba(0,0,0,0) 70%), radial-gradient(60% 70% at 8% 100%, hsla(' + (d.h + 40) + ',70%,45%,0.45), rgba(0,0,0,0) 70%), repeating-linear-gradient(115deg, rgba(255,255,255,0.05) 0 1px, rgba(0,0,0,0) 1px 22px), linear-gradient(160deg, hsl(' + d.h + ',35%,15%), #07070a)'),
+        ringStyle: 'position:absolute;left:50%;top:44%;width:78%;padding-bottom:78%;height:0;margin:-39% 0 0 -39%;border-radius:50%;border:1px solid rgba(255,255,255,0.12)',
+        ring2Style: 'position:absolute;left:50%;top:44%;width:112%;padding-bottom:112%;height:0;margin:-56% 0 0 -56%;border-radius:50%;border:1px solid rgba(255,255,255,0.06)',
+        p0: pst(d, 0), p1: pst(d, 1), p2: pst(d, 2),
+        tag: d.tag, tagStyle: 'position:absolute;left:5%;bottom:6%;font-family:Inter,sans-serif;font-size:' + (c ? '12px' : '10px') + ';letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.7);white-space:nowrap;transition:font-size .7s',
+        glassStyle: d.glass ? 'position:absolute;left:50%;top:20%;width:64%;box-sizing:border-box;padding:' + (c ? '7%' : '6%') + ';border-radius:20px;transform:translateX(-50%) rotate(-3deg);background:linear-gradient(145deg,rgba(255,255,255,0.16),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.22);box-shadow:0 30px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.25);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)' : 'display:none',
+        glass2Style: d.glass ? 'position:absolute;left:50%;top:30%;width:64%;padding-bottom:34%;height:0;border-radius:20px;transform:translateX(-46%) rotate(6deg);background:linear-gradient(145deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.12)' : 'display:none',
+        g1: d.glass ? d.glass[0] : '', g2: d.glass ? d.glass[1] : '', g3: d.glass ? d.glass[2] : '',
+        g1s: "font-family:Inter,sans-serif;font-size:" + (c ? '10px' : '8px') + ";letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.65)",
+        g2s: "font-family:'Inter Tight',Inter,sans-serif;font-style:italic;font-weight:300;letter-spacing:-0.04em;line-height:1;margin:" + (c ? '18px' : '12px') + " 0;color:#fff;font-size:" + (c ? 'clamp(30px,3.4vw,52px)' : 'clamp(18px,1.8vw,28px)'),
+        g3s: "font-family:Inter,sans-serif;font-size:" + (c ? '11px' : '8px') + ";letter-spacing:0.12em;color:rgba(255,255,255,0.6);white-space:pre",
+        titleStyle: 'position:relative;font-family:Poppins,Inter,sans-serif;font-weight:600;line-height:1.1;letter-spacing:-0.02em;color:#fff;white-space:nowrap;overflow:hidden;transition:all .7s ' + ease + ';font-size:' + (c ? 'clamp(44px,4.8vw,72px)' : 'clamp(22px,2.2vw,32px)') + ';margin-top:' + (c ? '-0.3em' : '24px') + ';max-height:1.4em;opacity:' + (c || side ? 1 : 0),
+        descStyle: 'font-family:Poppins,Inter,sans-serif;font-weight:300;color:' + (c ? '#9b9b9b' : '#8a8a8a') + ';line-height:1.6;transition:all .7s ' + ease + ';font-size:' + (c ? 'clamp(15px,1.4vw,20px)' : 'clamp(12px,1vw,14px)') + ';margin-top:' + (c ? '20px' : '12px'),
+        btnStyle: 'display:inline-block;margin-top:28px;padding:14px 26px;border:1px solid #fff;border-radius:8px;color:#fff;font-family:Poppins,Inter,sans-serif;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;transition:opacity .6s ease;opacity:' + (c ? 1 : 0) + ';visibility:' + (c ? 'visible' : 'hidden') + (d.soon ? ';pointer-events:none;border-color:rgba(255,255,255,0.35);color:rgba(255,255,255,0.55)' : '')
+      };
+    });
+    const fsPrev = () => this.setState({ fs: ((fs - 1) % M + M) % M });
+    const fsNext = () => this.setState({ fs: (fs + 1) % M });
+    const fsMove = (e) => { const r = e.currentTarget.getBoundingClientRect(); this.setState({ fsOn: true, fsX: e.clientX - r.left, fsY: e.clientY - r.top }); };
+    const fsLeave = () => this.setState({ fsOn: false });
+    const fsDot = 'position:absolute;z-index:30;pointer-events:none;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:' + (this.props.accent ?? '#D9C8A6') + ';transition:opacity .25s ease, left .35s ease-out, top .35s ease-out;opacity:' + (this.state.fsOn ? 1 : 0) + ';left:' + (this.state.fsX ?? 0) + 'px;top:' + (this.state.fsY ?? 0) + 'px';
+    const idx = this.state.idx ?? 0, face = !!this.state.face, onStage = !!this.state.onStage;
+    const px = this.state.px ?? 0, py = this.state.py ?? 0, sw = this.state.sw ?? 1300, sh = this.state.sh ?? 860;
+    const data = [
+      { tag: 'Case study', title: 'Revolut', art: "linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6)), url(assets/17a26e5a1c0f3accbc27d294455eaa14.png) center 42%/cover no-repeat, #0b0b0e" },
+      { tag: 'Case study', title: 'Klivvr', art: "linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6)), url(assets/b0aab2affbe46b409fcc9a556b2c04e9.jpg) center/cover no-repeat, #0b0b0e" },
+      { tag: 'Case study', title: 'Goodground', art: "linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6)), url(assets/f539fbf2bbc4925498fbfcc71a0c0605.jpg) center/cover no-repeat, #0b0b0e" }
+    ];
+    const slides = data.map((d, i) => ({ tag: d.tag, title: d.title, style: 'position:absolute;inset:0;background:' + d.art + ';transition:opacity .8s ease;opacity:' + (i === idx && !face ? 1 : 0) }));
+    const size = 220;
+    const cx = onStage ? Math.min(Math.max(px + 24, 0), sw - size) : sw - size - 8;
+    const cy = onStage ? Math.min(Math.max(py + 24, 0), sh - size) : sh - size - 40;
+    const cardStyle = 'position:absolute;z-index:20;pointer-events:none;width:' + size + 'px;height:' + size + 'px;border-radius:16px;overflow:hidden;background:#101014;border:1px solid rgba(255,255,255,0.16);box-shadow:0 24px 60px rgba(0,0,0,0.6);transition:left .25s ease-out, top .25s ease-out, opacity .3s ease;opacity:' + (face ? 0 : 1) + ';left:' + cx + 'px;top:' + cy + 'px';
+    const faceStyle = 'position:absolute;inset:0;padding:18px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;background:rgba(18,18,22,0.92);transition:opacity .35s ease;opacity:' + (face ? 1 : 0);
+    const stageMove = (e) => {
+      const r = e.currentTarget.getBoundingClientRect();
+      const f = !!(e.target && e.target.closest && e.target.closest('.nh-frame'));
+      this.setState({ onStage: true, face: f, px: e.clientX - r.left, py: e.clientY - r.top, sw: r.width, sh: r.height });
+    };
+    const stageLeave = () => this.setState({ onStage: false, face: false });
+    const x = this.state.x ?? 0, y = this.state.y ?? 0, on = !!this.state.on;
+    const mask = 'radial-gradient(circle 120px at ' + x + 'px ' + y + 'px, #000 55%, rgba(0,0,0,0) 100%)';
+    const hs = this.state, hr = hs.hr ?? 0, hcx = hs.hcx ?? 0, hcy = hs.hcy ?? 0, hopen = !!hs.hopen;
+    const hdx = hs.hdx ?? 0, hdy = hs.hdy ?? 0, hfw = hs.hfw ?? 500, hfh = hs.hfh ?? 456;
+    const hc = hs.hc ?? 0, he = 1 - Math.pow(1 - hc, 3);
+    const pox = onStage ? Math.max(-1, Math.min(1, (px / sw - 0.5) * 2)) : 0, poy = onStage ? Math.max(-1, Math.min(1, (py / sh - 0.5) * 2)) : 0;
+    const nhParaP = 'transform:translate(' + (-pox * 14).toFixed(1) + 'px,' + (-poy * 8).toFixed(1) + 'px);transition:transform .7s cubic-bezier(.2,.7,.2,1)';
+    const nhParaT = 'transform:translate(' + (pox * 18).toFixed(1) + 'px,' + (poy * 10).toFixed(1) + 'px);transition:transform .9s cubic-bezier(.2,.7,.2,1)';
+    const nhWin = 'position:absolute;inset:0;z-index:40;overflow:hidden;pointer-events:none;visibility:' + (hr > 0.5 ? 'visible' : 'hidden') + ';clip-path:circle(' + hr.toFixed(1) + 'px at ' + hcx.toFixed(1) + 'px ' + hcy.toFixed(1) + 'px)';
+    const nhImg = 'position:absolute;left:' + (hs.fl ?? 0).toFixed(1) + 'px;top:' + (hs.ft ?? 0).toFixed(1) + 'px;width:' + hfw.toFixed(1) + 'px;height:' + hfh.toFixed(1) + 'px;transform:translate(' + (-pox * 14).toFixed(1) + 'px,' + (-poy * 8).toFixed(1) + 'px);transition:transform .7s cubic-bezier(.2,.7,.2,1)';
+    const nhRim = 'position:absolute;z-index:41;pointer-events:none;border-radius:50%;box-sizing:border-box;border:1px solid rgba(255,255,255,0.4);box-shadow:0 24px 70px -10px rgba(0,0,0,0.85),inset 0 0 40px rgba(255,255,255,0.08);transition:opacity .4s;opacity:' + (hopen ? 0 : 1) + ';left:' + (hcx - hr).toFixed(1) + 'px;top:' + (hcy - hr).toFixed(1) + 'px;width:' + (2 * hr).toFixed(1) + 'px;height:' + (2 * hr).toFixed(1) + 'px';
+    const hwData = [["01", "Question the brief", "I go back to the goal and the user problem before I open a design tool. Many requirements turn out to be assumptions, and finding that early saves the whole team time."], ["02", "Lower the load", "Every screen should ask for less thinking. I cut steps, plain the language and show people where they stand at every moment."], ["03", "Be honest in the interface", "Regulated products carry risk. I design disclosures, rates and limits so people understand them, not so they scroll past them."], ["04", "Prototype to decide", "I work visually and build interactive prototypes early, so the team reacts to something real instead of a description."]];
+    const hwA = this.state.hw ?? 0;
+    const hwAcc = this.props.accent ?? '#D9C8A6';
+    const hwCards = hwData.map((d, k) => {
+      const on = k === hwA;
+      return {
+        n: d[0], t: d[1], d: d[2],
+        enter: () => { this._hwHold = true; this.setState({ hw: k }); },
+        box: 'position:relative;overflow:hidden;box-sizing:border-box;min-width:0;border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;cursor:default;transition:flex .8s cubic-bezier(.2,.8,.2,1),background .6s ease,border-color .6s ease;flex:' + (on ? 3.4 : 1) + ' 1 0;border:1px solid ' + (on ? 'rgba(217,200,166,0.5)' : 'rgba(255,255,255,0.12)') + ';background:' + (on ? 'radial-gradient(120% 90% at 0% 0%,rgba(217,200,166,0.16),rgba(255,255,255,0.03) 60%)' : 'rgba(255,255,255,0.03)'),
+        num: "font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:300;line-height:1;transition:font-size .6s ease,color .6s ease;color:" + (on ? hwAcc : '#6f6c66') + ';font-size:' + (on ? 84 : 40) + 'px',
+        title: "font-family:'Inter Tight',Inter,sans-serif;letter-spacing:-0.02em;margin-top:18px;transition:font-size .6s ease;font-size:" + (on ? 32 : 20) + 'px;color:' + (on ? '#f6f1e4' : '#b9b4a8'),
+        text: 'font-size:16px;line-height:1.6;color:#a7a29a;max-width:460px;overflow:hidden;transition:opacity .6s ease .15s,max-height .7s ease;opacity:' + (on ? 1 : 0) + ';max-height:' + (on ? 160 : 0) + 'px;margin-top:' + (on ? 14 : 0) + 'px',
+      };
+    });
+    const hwLeave = () => { this._hwHold = false; };
+    const nhRt = 'position:absolute;z-index:42;pointer-events:none;transform:translate(-50%,-50%);text-align:center;font-family:\'Cormorant Garamond\',Georgia,serif;font-style:italic;font-weight:300;font-size:22px;line-height:1.1;color:#f6f1e4;text-shadow:0 2px 18px rgba(0,0,0,0.85);left:' + hcx.toFixed(1) + 'px;top:' + hcy.toFixed(1) + 'px;opacity:' + (hopen ? 0 : Math.min(1, hr / 105)).toFixed(2);
+    const nhMove = (e) => {
+      const h = this._h, g = this._nhGeo();
+      if (!g || h.open) return;
+      h.tx = e.clientX - g.rr.left; h.ty = e.clientY - g.rr.top;
+      if (h.tr === 0) { h.cx = h.tx; h.cy = h.ty; }
+      h.tr = 105;
+      this._nhAlign(g);
+    };
+    const nhLeave = () => { const h = this._h; if (!h.open) h.tr = 0; };
+    const nhClick = () => {};
+    return {
+      hwCards, hwLeave,
+      nhWin, nhImg, nhParaP, nhParaT, nhRim, nhRt, nhMove, nhLeave, nhClick,
+      nhS1: Math.round(7 * he) + ' years', nhS2: Math.round(20 * he) + '+ products', nhS3: Math.round(10 * he) + '+ markets', nhS4: Math.round(3 * he) + ' hats',
+      accent: this.props.accent ?? '#D9C8A6',
+      rvCards, rvTrack, rvPrev, rvNext, rvEnter, rvLeave,
+      fsCards, fsPrev, fsNext, fsMove, fsLeave, fsDot,
+      wkCards, wkTrackStyle, wkPrevStyle, wkNextStyle, wkPrev, wkNext,
+      pCards, pTitle: cur.t, pCat: cur.c, pStatus: cur.soon ? 'Coming soon' : 'Live', pStatusStyle: 'margin-top:6px;padding:6px 14px;border-radius:999px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;border:1px solid ' + (cur.soon ? 'rgba(255,255,255,0.22);color:#a7a29a' : 'rgba(63,198,198,0.6);color:#3fc6c6'), pNum: String(best + 1).padStart(2, '0'), pTotal: String(N).padStart(2, '0'), pBar, pDown, pMove, pUp, pLeave, pWheel,
+      slides, cardStyle, faceStyle, stageMove, stageLeave,
+      onMove: (e) => {
+        const r = e.currentTarget.getBoundingClientRect();
+        this.setState({ x: e.clientX - r.left, y: e.clientY - r.top, on: true, face: true });
+      },
+      onLeave: () => this.setState({ on: false, face: false }),
+      lensImgStyle: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block;transition:opacity .35s ease;opacity:' + (on ? 1 : 0) + ';-webkit-mask-image:' + mask + ';mask-image:' + mask,
+      ringStyle: 'position:absolute;left:' + (x - 120) + 'px;top:' + (y - 120) + 'px;width:240px;height:240px;border-radius:50%;box-sizing:border-box;border:1px solid rgba(255,255,255,0.28);display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(217,200,166,0.18), inset 0 0 40px rgba(255,255,255,0.05);transition:opacity .35s ease;opacity:' + (on ? 1 : 0)
+    };
+  }
+}
+</script>
+</body>
+</html>
