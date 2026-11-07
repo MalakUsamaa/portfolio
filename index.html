@@ -345,15 +345,24 @@ a:hover{color:#f6f1e4}
 <div style="font-family: 'Inter Tight', Inter, sans-serif; font-weight: 300; font-size: clamp(48px, 6vw, 96px); line-height: 1; letter-spacing: -0.04em">Have a project?</div>
 <div style="font-family: 'Inter Tight', Inter, sans-serif; font-weight: 300; font-style: italic; font-size: clamp(48px, 6vw, 96px); line-height: 1; letter-spacing: -0.04em; color: #D9C8A6">Tell me about it</div>
 </div>
-<div style="display: flex; flex-direction: column; gap: 14px">
+<div class="cf" style="display: flex; flex-direction: column; gap: 14px">
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px">
-<input type="text" placeholder="First name" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
-<input type="text" placeholder="Last name" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
-<input type="email" placeholder="Email" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
-<input type="tel" placeholder="Phone number" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
+<input type="text" data-f="first" placeholder="First name *" autocomplete="given-name" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
+<input type="text" data-f="last" placeholder="Last name (optional)" autocomplete="family-name" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
+<input type="email" data-f="email" placeholder="Email *" autocomplete="email" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
+<input type="tel" data-f="phone" placeholder="Phone (optional)" autocomplete="tel" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
 </div>
-<textarea placeholder="Tell me about it" rows="5" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none; resize: none"></textarea>
-<a href="mailto:Malak@mpavida.com" style="align-self: flex-start; padding: 16px 34px; border-radius: 999px; background: #f6f1e4; color: #0b0b0e; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500">Send</a>
+<select data-f="looking" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23a7a29a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 20px center; cursor: pointer">
+<option value="" selected disabled style="background: #0b0b0e; color: #a7a29a">What are you looking for? *</option>
+<option value="Full-time opportunity" style="background: #0b0b0e; color: #f6f1e4">Full-time opportunity</option>
+<option value="Product design consultancy" style="background: #0b0b0e; color: #f6f1e4">Product design consultancy</option>
+<option value="Product strategy" style="background: #0b0b0e; color: #f6f1e4">Product strategy</option>
+<option value="Design collaboration" style="background: #0b0b0e; color: #f6f1e4">Design collaboration</option>
+<option value="Something else" style="background: #0b0b0e; color: #f6f1e4">Something else</option>
+</select>
+<textarea data-f="more" placeholder="Tell me more (optional)" rows="5" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none; resize: none"></textarea>
+<div class="cf-err" role="alert" style="min-height: 18px; font-size: 13px; color: #D9C8A6"></div>
+<button type="button" onClick="{{ contactSend }}" style="align-self: flex-start; padding: 16px 34px; border: 0; border-radius: 999px; background: #f6f1e4; color: #0b0b0e; font-family: Inter, sans-serif; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; cursor: pointer">Send</button>
 </div>
 </div>
 <div style="margin: 110px -56px 0; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 30px 0">
@@ -556,6 +565,17 @@ class Component extends DCLogic {
       this.setState({ onStage: true, face: f, px: e.clientX - r.left, py: e.clientY - r.top, sw: r.width, sh: r.height });
     };
     const stageLeave = () => this.setState({ onStage: false, face: false });
+    const contactSend = (e) => {
+      const f = e.currentTarget.closest('.cf'), g = (k) => ((f.querySelector('[data-f="' + k + '"]') || {}).value || '').trim();
+      const err = f.querySelector('.cf-err');
+      const first = g('first'), last = g('last'), email = g('email'), phone = g('phone'), looking = g('looking'), more = g('more');
+      if (!first || !email || !looking) { err.textContent = 'Please add your first name, email and what you are looking for.'; return; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = 'Please check your email address.'; return; }
+      err.textContent = 'Opening your email app with your message ready to send.';
+      const body = 'Name: ' + first + (last ? ' ' + last : '') + '\nEmail: ' + email + (phone ? '\nPhone: ' + phone : '') + '\nLooking for: ' + looking + (more ? '\n\n' + more : '');
+      const a = document.createElement('a'); a.href = 'mailto:Malak@mpavida.com?subject=' + encodeURIComponent('Website enquiry: ' + looking) + '&body=' + encodeURIComponent(body);
+      document.body.appendChild(a); a.click(); a.remove();
+    };
     const stageClick = (e) => {
       if (face || !data[idx] || (e.target && e.target.closest && e.target.closest('a,button,.nh-frame'))) return;
       const a = document.createElement('a'); a.href = data[idx].href; document.body.appendChild(a); a.click(); a.remove();
@@ -606,7 +626,7 @@ class Component extends DCLogic {
       fsCards, fsPrev, fsNext, fsMove, fsLeave, fsDot,
       wkCards, wkTrackStyle, wkPrevStyle, wkNextStyle, wkPrev, wkNext,
       pCards, pTitle: cur.t, pType: cur.ty, pDesc: cur.ds, pCat: cur.c, pStatus: cur.soon ? 'Coming soon' : 'Live', pStatusStyle: 'margin-top:6px;padding:6px 14px;border-radius:999px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;border:1px solid ' + (cur.soon ? 'rgba(255,255,255,0.22);color:#a7a29a' : 'rgba(217,200,166,0.6);color:#D9C8A6'), pNum: String(best + 1).padStart(2, '0'), pTotal: String(N).padStart(2, '0'), pBar, pDown, pMove, pUp, pLeave, pWheel,
-      slides, cardStyle, faceStyle, stageMove, stageLeave, stageClick,
+      slides, cardStyle, faceStyle, stageMove, stageLeave, stageClick, contactSend,
       onMove: (e) => {
         const r = e.currentTarget.getBoundingClientRect();
         this.setState({ x: e.clientX - r.left, y: e.clientY - r.top, on: true, face: true });
