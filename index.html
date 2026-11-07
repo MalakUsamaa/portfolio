@@ -280,13 +280,13 @@ a:hover{color:#f6f1e4}
 <div style="{{ fsDot }}"></div>
 <div style="position: relative; height: clamp(520px, 41vw, 600px); text-align: left">
 <sc-for list="{{ fsCards }}" as="f" hint-placeholder-count="4">
-<div style="{{ f.wrapStyle }}">
+<a href="{{ f.href }}" aria-label="{{ f.name }} case study" style="{{ f.wrapStyle }}">
 <div style="{{ f.artStyle }}"><div style="{{ f.ringStyle }}"></div><div style="{{ f.ring2Style }}"></div><div style="{{ f.p0 }}"></div><div style="{{ f.p1 }}"></div><div style="{{ f.p2 }}"></div><div style="{{ f.glass2Style }}"></div><div style="{{ f.glassStyle }}"><div style="{{ f.g1s }}">{{ f.g1 }}</div><div style="{{ f.g2s }}">{{ f.g2 }}</div><div style="{{ f.g3s }}">{{ f.g3 }}</div></div><div style="{{ f.tagStyle }}">{{ f.tag }}</div></div>
 <div style="{{ f.titleStyle }}">{{ f.name }}</div>
 <div style="{{ f.roleStyle }}">{{ f.role }}</div>
 <div style="{{ f.descStyle }}">{{ f.desc }}</div>
-<a href="{{ f.href }}" style="{{ f.btnStyle }}">{{ f.btnLabel }}</a>
-</div>
+<span style="{{ f.btnStyle }}">{{ f.btnLabel }}</span>
+</a>
 </sc-for>
 <div style="position: absolute; right: 0; bottom: 0; display: flex; gap: 12px">
 <button type="button" aria-label="Previous project" onClick="{{ fsPrev }}" style="width: 56px; height: 56px; border-radius: 50%; border: 0; background: #2a2a2c; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"></path><path d="M11 6l-6 6 6 6"></path></svg></button>
@@ -513,7 +513,7 @@ class Component extends DCLogic {
       return {
         name: d.n, desc: d.d, role: d.role,
         roleStyle: 'font-family:Poppins,Inter,sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:0.16em;color:#D9C8A6;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;transition:all .7s ' + ease + ';font-size:' + (c ? '12px' : '10px') + ';margin-top:' + (c ? '14px' : '8px') + ';opacity:' + (c ? 1 : 0) + ';max-height:' + (c ? '2em' : '0'), href: d.soon ? '#' : '/' + d.n.toLowerCase(), btnLabel: d.soon ? 'Coming soon' : 'View case study',
-        wrapStyle: 'position:absolute;top:0;box-sizing:border-box;left:' + left + '%;width:' + width + '%;opacity:' + (c || side ? 1 : 0) + ';pointer-events:' + (c ? 'auto' : 'none') + ';transition:left .8s ' + ease + ', width .8s ' + ease + ', opacity .6s ease',
+        wrapStyle: 'position:absolute;top:0;box-sizing:border-box;left:' + left + '%;width:' + width + '%;opacity:' + (c || side ? 1 : 0) + ';pointer-events:' + (c ? 'auto' : 'none') + ';transition:left .8s ' + ease + ', width .8s ' + ease + ', opacity .6s ease;display:block;color:inherit;text-decoration:none;cursor:pointer',
         artStyle: 'width:100%;height:0;padding-bottom:' + (c ? 68 : 85) + '%;overflow:hidden;border-radius:24px;transition:padding-bottom .8s ' + ease + ';position:relative;background:' + (d.img ? 'linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55)), url(assets/' + d.img + ') center 42%/cover no-repeat, #0b0b0e' : '') + (d.img ? '' : 'radial-gradient(70% 60% at 78% 16%, hsla(' + d.h + ',80%,66%,0.5), rgba(0,0,0,0) 70%), radial-gradient(60% 70% at 8% 100%, hsla(' + (d.h + 40) + ',70%,45%,0.45), rgba(0,0,0,0) 70%), repeating-linear-gradient(115deg, rgba(255,255,255,0.05) 0 1px, rgba(0,0,0,0) 1px 22px), linear-gradient(160deg, hsl(' + d.h + ',35%,15%), #07070a)'),
         ringStyle: 'position:absolute;left:50%;top:44%;width:78%;padding-bottom:78%;height:0;margin:-39% 0 0 -39%;border-radius:50%;border:1px solid rgba(255,255,255,0.12)',
         ring2Style: 'position:absolute;left:50%;top:44%;width:112%;padding-bottom:112%;height:0;margin:-56% 0 0 -56%;border-radius:50%;border:1px solid rgba(255,255,255,0.06)',
