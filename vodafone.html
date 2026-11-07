@@ -362,6 +362,41 @@ div[style*="gap: 6px"]:has(>div>span[style*="border-radius: 50%"]),div[style*="g
 .vfx-phone .vfx-b{margin-top:auto;width:100%;flex:none}
 .vfx-phone .vfx-b.s{width:auto;align-self:center}
 @media (min-width:901px){.vfx-stage{min-height:0;padding:18px}}
+
+.vfx-flat{background:#F2F2F2;color:#222;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:12px;padding:20px;margin:16px 0}
+.vfx-flat.dk{background:#464646;color:#fff}
+.vfx-trn{display:grid;grid-template-columns:1fr 1fr;gap:12px}.vfx-trn figure{margin:0;cursor:zoom-in}.vfx-trn img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid rgba(255,255,255,.12)}
+.vfx-in label{display:block;font-size:12px;margin-bottom:6px;color:inherit}.vfx-in label i{font-style:normal;opacity:.6}
+.vfx-in input{font:inherit;font-size:15px;width:100%;height:48px;border-radius:8px;border:1.5px solid #D5D5D5;background:#fff;color:#222;padding:0 14px;outline:none;transition:border-color .15s}
+.vfx-in input::placeholder{color:#909090}
+.vfx-in input:focus,.vfx-in input.f{border-color:#00697C}
+.vfx-in input.e{border-color:#E60000}
+.vfx-in input:disabled{background:#fff;border-color:#E6E6E6;color:#B1B1B1;opacity:.6}
+.vfx-in input.r{background:#E6E6E6;border-color:#E6E6E6}
+.vfx-in small{display:block;margin-top:6px;font-size:12px;color:#E60000}
+.vfx-cell{display:flex;align-items:center;gap:12px;background:#fff;border-radius:12px;padding:12px 14px;cursor:pointer;color:#222;border:1.5px solid transparent;transition:border-color .15s}
+.vfx-flat.dk .vfx-cell{background:#222;color:#fff}
+.vfx-cell.sel{border-color:#00697C}
+.vfx-cell .av{width:36px;height:36px;border-radius:50%;background:#D5D5D5;flex:none}
+.vfx-cell .tx{flex:1;min-width:0}.vfx-cell b{display:block;font-weight:500;font-size:14px}.vfx-cell .tx span{display:block;font-size:12px;opacity:.65;margin-top:2px}
+.vfx-cell .vl{font-size:13px;white-space:nowrap}
+.vfx-cell .ck{width:20px;height:20px;border-radius:5px;border:1.5px solid #909090;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px}
+.vfx-cell .ck.rd{border-radius:50%}
+.vfx-cell.sel .ck{background:#00697C;border-color:#00697C}
+.vfx-cell.sel .ck.rd{background:#fff;box-shadow:inset 0 0 0 4px #00697C}
+.vfx-cell .ch{width:8px;height:8px;border-right:1.5px solid #909090;border-top:1.5px solid #909090;transform:rotate(45deg);flex:none}
+.vfx-tg{display:flex;align-items:center;gap:12px;font-size:13px}
+.vfx-sw2{width:44px;height:26px;border-radius:13px;border:1.5px solid #D5D5D5;background:#D5D5D5;position:relative;cursor:pointer;flex:none;transition:background .2s,border-color .2s;padding:0}
+.vfx-sw2:after{content:"";position:absolute;top:1.5px;left:2px;width:19px;height:19px;border-radius:50%;background:#fff;border:1px solid #D5D5D5;transition:transform .2s}
+.vfx-sw2.on{background:#00697C;border-color:#00697C}.vfx-sw2.on:after{transform:translateX(18px);border-color:#fff}
+.vfx-sw2:disabled{opacity:.45;cursor:not-allowed}
+.vfx-chs{display:flex;flex-wrap:wrap;gap:8px}
+.vfx-ch{font:inherit;font-size:13px;border-radius:999px;height:32px;padding:0 14px;border:1.5px solid #E6E6E6;background:#fff;color:#222;cursor:pointer;transition:all .15s}
+.vfx-ch.on{background:#00697C;border-color:#00697C;color:#fff}
+.vfx-st{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;border-radius:999px;font-size:12px;font-weight:500}
+.vfx-st:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.vfx-st.g{background:#E6F3E6;color:#008A00}.vfx-st.o{background:#FDEFE6;color:#CC4B02}.vfx-st.r{background:#FDE6E6;color:#A30000}
+@media (max-width:900px){.vfx-trn{grid-template-columns:1fr}}
 </style>
 </helmet>
 <div class="cs" style="min-height:0">
@@ -382,8 +417,13 @@ div[style*="gap: 6px"]:has(>div>span[style*="border-radius: 50%"]),div[style*="g
 <div class="band"><h4>Explore the system</h4><p class="sub">Colour and components from the library. Try them.</p><div class="vfx">
 <div class="vfx-card"><h5>Colour palette: samples</h5><p>A small sample of the full palette: four families, five shades each. Pick a family, then a swatch to check how readable text is on it.</p><div class="vfx-tabs" id="vfx-tabs"></div><div class="vfx-pal" id="vfx-pal"></div><div class="vfx-info"><div class="vfx-chip" id="vfx-chip"></div><div id="vfx-meta"></div></div></div>
 <div class="vfx-card"><h5>Button</h5><p>A live version of the button component, built from the palette. Hover it, press it, change it.</p><div class="vfx-stage" id="vfx-stage"><div class="vfx-phone" id="vfx-phone"><i class="kh"></i><i class="kt"></i><i class="kl"></i><i class="kl kw"></i><div class="vfx-blk"></div><button class="vfx-b l" id="vfx-b" type="button"></button></div></div><p class="vfx-spec" style="margin:-6px 0 14px;font-size:12px">Shown on an illustrative screen.</p><div class="vfx-ctls" id="vfx-ctls"></div><p class="vfx-spec" id="vfx-spec" style="margin:18px 0 0"></p></div>
+<div class="vfx-card"><h5>Input field</h5><p>Try the states. Type into the field to see it in use.</p><div class="vfx-stage vfx-flat" id="vfx-istage"></div><div class="vfx-ctls" id="vfx-ictl"></div></div>
+<div class="vfx-card"><h5>Cells</h5><p>One row pattern, three behaviours. Tap the rows.</p><div class="vfx-stage vfx-flat" id="vfx-cstage"></div><div class="vfx-ctls" id="vfx-cctl"></div></div>
+<div class="vfx-card"><h5>Toggles</h5><p>Tap the two on top. The bottom pair shows the disabled look.</p><div class="vfx-stage vfx-flat" id="vfx-tstage"></div></div>
+<div class="vfx-card"><h5>Chips</h5><p>Filter chips you can select, and status chips for tagging content.</p><div class="vfx-stage vfx-flat" id="vfx-chstage"></div></div>
 <div class="vfx-shots"><figure data-zoom="assets/a417241cc8c6f1172da6862e4a025f23.png"><img src="assets/a417241cc8c6f1172da6862e4a025f23.png" alt="Main colour palette from the Vodafone design system"><figcaption>The full palette, in the library. Tap to enlarge.</figcaption></figure><figure data-zoom="assets/b4786cffcfbf22ab8b5604f4d9791a08.png"><img src="assets/b4786cffcfbf22ab8b5604f4d9791a08.png" alt="Button variants and states in English and Arabic"><figcaption>Button variants and states, English and Arabic. Tap to enlarge.</figcaption></figure></div>
 </div><div class="vfx-zoom" id="vfx-zoom"><img alt=""></div></div>
+<div class="band"><h4>Team training</h4><p class="sub">Variables and Figma housekeeping, 8 April 2025.</p><div class="vf-split"><div><p style="margin:0 0 22px;font-size:19px;line-height:1.55;color:#f6f1e4;font-weight:300">A system only works when everyone uses it the same way. So alongside the library, we ran a hands-on training for the team on how variables work and how to keep Figma files clean.</p><ul class="vf-list"><li><strong>Variables overview.</strong> What they are, why we use them and when to use each: colour, spacing, typography and effects.</li><li><strong>Housekeeping.</strong> File structure, component organisation, naming and handoff preparation.</li><li><strong>Live demo and tips.</strong> Applying variables in real time, common mistakes and ways to work faster.</li><li><strong>Activity and take home task.</strong> A take home task asked the team to recreate a public landing page using our variables, on web and mobile, to build confidence before using them on product work.</li></ul></div><div class="vfx-trn"><figure data-zoom="assets/30d1a1d78f009b45504752d2a7a93446.png"><img src="assets/30d1a1d78f009b45504752d2a7a93446.png" alt="Training agenda slide"></figure><figure data-zoom="assets/733aa24a361bd10614f78ec2880432ec.png"><img src="assets/733aa24a361bd10614f78ec2880432ec.png" alt="Colour variables slide"></figure><figure data-zoom="assets/e6b5a977fa417a4de51fa202c942fac5.png"><img src="assets/e6b5a977fa417a4de51fa202c942fac5.png" alt="Spacing variables slide"></figure><figure data-zoom="assets/fa44b61c9e8c7beac79c1caa44cb78b9.png"><img src="assets/fa44b61c9e8c7beac79c1caa44cb78b9.png" alt="Naming slide"></figure></div></div><div class="glance vf2" style="margin-top:56px"><div><span>Why variables</span><p>Consistency, because everyone uses the same values. Scalability, because changing a token updates everything. Developer alignment, because the names match what is in code.</p></div><div><span>Next in the series</span><p>Visual hierarchy, typography, component usage and request handling.</p></div></div></div>
 <div class="sec"><div class="lab"><span>03 How I worked</span><h3>Structure with participation</h3></div><div class="body"><p>My approach combined structure with participation. I didn’t want process to become a set of rigid steps; I wanted it to help people do better work together.</p><p>That meant creating clarity without limiting exploration, making space for different perspectives and supporting designers throughout the process rather than only reviewing their final output.</p></div></div>
 <div class="sec"><div class="lab"><span>04 The impact</span><h3>Better alignment, clearer framework</h3></div><div class="body"><p>My contribution helped establish a more structured design approach, encouraged stronger collaboration between stakeholders and supported the development of designers within the team.</p><p>The impact was qualitative: better alignment, more intentional design conversations and a clearer framework for approaching product challenges.</p></div></div>
 <div class="band"><h4>What colleagues say</h4><p class="sub">Written feedback from the team.</p><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px"><div style="border-top:1px solid rgba(255,255,255,.14);padding-top:28px;display:flex;flex-direction:column;justify-content:space-between"><p style="margin:0 0 28px;font-size:19px;line-height:1.55;color:#f6f1e4;font-weight:300">&ldquo;Your passion for helping others and the way you communicate feedback is both smart and thoughtful.&rdquo;</p><p style="margin:0;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#a7a29a">Colleague feedback</p></div><div style="border-top:1px solid rgba(255,255,255,.14);padding-top:28px;display:flex;flex-direction:column;justify-content:space-between"><p style="margin:0 0 28px;font-size:19px;line-height:1.55;color:#f6f1e4;font-weight:300">&ldquo;Not gatekeeping any information you have, you always want people to learn more. You are not like any ordinary leader, you are the one who actually leads the whole pack to success.&rdquo;</p><p style="margin:0;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#a7a29a">Colleague feedback</p></div><div style="border-top:1px solid rgba(255,255,255,.14);padding-top:28px;display:flex;flex-direction:column;justify-content:space-between"><p style="margin:0 0 28px;font-size:19px;line-height:1.55;color:#f6f1e4;font-weight:300">&ldquo;You have a strong presence and a significant impact wherever you go.&rdquo;</p><p style="margin:0;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#a7a29a">Colleague feedback</p></div></div></div>
@@ -393,7 +433,7 @@ div[style*="gap: 6px"]:has(>div>span[style*="border-radius: 50%"]),div[style*="g
 </div>
 <dc-import name="AskMalak" hint-size="0px,0px"></dc-import>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":10600}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":12400}}'>
 class Component extends DCLogic {
   componentDidMount() {
     const P={Neutrals:{'0':'FFFFFF','50':'FDFDFD','100':'F8F8F8','200':'F2F2F2','300':'E6E6E6','400':'D5D5D5','500':'B1B1B1','600':'909090','700':'6C6C6C','800':'464646','900':'222222','950':'1A1A1A','1000':'0D0D0D'},
@@ -436,17 +476,36 @@ class Component extends DCLogic {
       ctl.innerHTML=seg('v',['Style',[['filled','Filled'],['outline','Outline'],['text','Text']]])+seg('sz',['Size',[['l','Large'],['m','Medium'],['s','Small']]])+seg('ic',['Icon',[['none','None'],['left','Left'],['right','Right']]])+seg('dir',['Language',[['en','English'],['ar','Arabic']]])+seg('dark',['Surface',[[false,'Light'],[true,'Dark']]])+seg('dis',['State',[[false,'Active'],[true,'Disabled']]]);
       $('vfx-spec').innerHTML=`Fill <code>${v==='filled'?'red-500':'turquoise-500'}</code> &nbsp;·&nbsp; Hover <code>${v==='filled'?'red-600':'turquoise-50'}</code> &nbsp;·&nbsp; Pressed <code>${v==='filled'?'red-700':'turquoise-100'}</code> &nbsp;·&nbsp; Disabled <code>${v==='filled'?'neutral-400':'neutral-500'}</code>`;
     };
+
+    const stI={s:'default'}, stC={m:'nav',dark:false,sel:{}}, stT=[true,false], stCh=[true,false,false,false];
+    const drawMore=()=>{
+      const is=$('vfx-istage'); if(!is) return;
+      const S=stI.s, hp=S==='error';
+      is.innerHTML=`<div class="vfx-in"><label>Label <i>(Optional)</i></label><input id="vfx-inp" class="${S==='focused'?'f':S==='error'?'e':S==='readonly'?'r':''}" placeholder="This is a placeholder" ${S==='disabled'?'disabled':''} ${S==='readonly'?'readonly':''} value="${S==='filled'?'Filled value':S==='readonly'?'Read only value':hp?'Entered value':''}">${hp?'<small>Helper text explains what went wrong.</small>':''}</div>`;
+      $('vfx-ictl').innerHTML=`<div><label>State</label>${[['default','Default'],['filled','Filled'],['focused','Focused'],['error','Error'],['disabled','Disabled'],['readonly','Read only']].map(([v,t])=>`<button type="button" data-ik="${v}" class="${S===v?'on':''}">${t}</button>`).join('')}</div>`;
+      const cs=$('vfx-cstage'); const m=stC.m; cs.className='vfx-stage vfx-flat'+(stC.dark?' dk':'');
+      cs.innerHTML=[0,1,2].map(i=>`<div class="vfx-cell ${stC.sel[m+i]?'sel':''}" data-ci="${i}"><span class="av"></span><span class="tx"><b>Title</b><span>Description</span></span><span class="vl">3442 EGP</span>${m==='nav'?'<span class="ch"></span>':m==='check'?`<span class="ck">${stC.sel[m+i]?'&#10003;':''}</span>`:'<span class="ck rd"></span>'}</div>`).join('');
+      $('vfx-cctl').innerHTML=`<div><label>Type</label>${[['nav','Navigation'],['check','Checkbox'],['radio','Radio']].map(([v,t])=>`<button type="button" data-cm="${v}" class="${m===v?'on':''}">${t}</button>`).join('')}</div><div><label>Surface</label><button type="button" data-cd="0" class="${!stC.dark?'on':''}">Light</button><button type="button" data-cd="1" class="${stC.dark?'on':''}">Dark</button></div>`;
+      $('vfx-tstage').innerHTML=[['Tap me',0,false],['Tap me too',1,false],['On, disabled',2,true],['Off, disabled',3,true]].map(([t,i,d])=>`<div class="vfx-tg"><button type="button" class="vfx-sw2 ${(i===0?stT[0]:i===1?stT[1]:i===2)?'on':''}" data-tg="${i}" ${d?'disabled':''} aria-label="${t}"></button>${t}</div>`).join('');
+      $('vfx-chstage').innerHTML=`<div class="vfx-chs">${['Label one','Label two','Label three','Label four'].map((t,i)=>`<button type="button" class="vfx-ch ${stCh[i]?'on':''}" data-ch="${i}">${t}</button>`).join('')}</div><div class="vfx-chs"><span class="vfx-st g">Active</span><span class="vfx-st o">Pending</span><span class="vfx-st r">Error</span></div>`;
+    };
     this._vfClick=(e)=>{
       const t=e.target;
       const f=t.closest&&t.closest('[data-f]'); if(f&&f.closest('#vfx-tabs')){st.fam=f.dataset.f; st.key=P[st.fam]['500']?'500':'0'; drawPal(); return;}
       const sw=t.closest&&t.closest('.vfx-sw'); if(sw){st.key=sw.dataset.k; drawPal(); return;}
       const bk=t.closest&&t.closest('#vfx-ctls [data-k]'); if(bk){const k=bk.dataset.k,v=bk.dataset.v; stt[k]=(v==='true'?true:v==='false'?false:v); drawBtn(); return;}
+      const ik=t.closest&&t.closest('[data-ik]'); if(ik){stI.s=ik.dataset.ik; drawMore(); if(stI.s==='default'||stI.s==='filled'){const q=$('vfx-inp'); } return;}
+      const cm=t.closest&&t.closest('[data-cm]'); if(cm){stC.m=cm.dataset.cm; drawMore(); return;}
+      const cd=t.closest&&t.closest('[data-cd]'); if(cd){stC.dark=cd.dataset.cd==='1'; drawMore(); return;}
+      const ci=t.closest&&t.closest('[data-ci]'); if(ci){const i=+ci.dataset.ci,m=stC.m; if(m==='check'){stC.sel[m+i]=!stC.sel[m+i];} else if(m==='radio'){[0,1,2].forEach(j=>stC.sel[m+j]=(j===i));} else {stC.sel[m+i]=!stC.sel[m+i];} drawMore(); return;}
+      const tg=t.closest&&t.closest('[data-tg]'); if(tg&&!tg.disabled){const i=+tg.dataset.tg; stT[i]=!stT[i]; drawMore(); return;}
+      const ch=t.closest&&t.closest('[data-ch]'); if(ch){const i=+ch.dataset.ch; stCh[i]=!stCh[i]; drawMore(); return;}
       const z=t.closest&&t.closest('[data-zoom]'); const zb=$('vfx-zoom');
       if(z&&zb){zb.querySelector('img').src=z.dataset.zoom; zb.classList.add('open'); return;}
       if(zb&&t.closest('#vfx-zoom')) zb.classList.remove('open');
     };
     document.addEventListener('click',this._vfClick);
-    drawPal(); drawBtn();
+    drawPal(); drawBtn(); drawMore();
   }
   renderVals() {
     return {};
