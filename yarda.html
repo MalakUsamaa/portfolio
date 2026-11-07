@@ -237,10 +237,16 @@ a{color:inherit;text-decoration:none}
 .yd2-wxd i{background:rgba(255,255,255,.55)}
 .yd2-wxl{position:absolute;left:0;right:0;bottom:10px;text-align:center;font-style:normal;font-size:12px;color:#05242E;font-weight:500;text-shadow:0 0 8px rgba(255,255,255,.8)}
 .yd2-gv{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.yd2-gc{border:1px solid #dcebe3;border-radius:14px;padding:14px 14px 12px;background:#fff}
+.yd2-gc{border:1px solid #dcebe3;border-radius:14px;padding:14px 14px 12px;background:#fff;animation:gcin .8s cubic-bezier(.2,.7,.2,1) both;transition:transform .35s ease,box-shadow .35s ease}
+.yd2-gc:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(5,36,46,.14)}
+.yd2-gc:nth-child(2){animation-delay:.12s}.yd2-gc:nth-child(3){animation-delay:.24s}.yd2-gc:nth-child(4){animation-delay:.36s}
+.yd2-wxw{animation:gcin .9s cubic-bezier(.2,.7,.2,1) both}
+.yd2-gdots i:hover{transform:scale(1.35)}
+.yd2-gdots span{transition:opacity .3s}
+@keyframes gcin{from{opacity:0;transform:translateY(22px) scale(.98)}to{opacity:1;transform:none}}
 .yd2-gc h5{margin:0 0 10px;font-size:14px;font-weight:500;font-style:normal;font-family:Rubik,Inter,sans-serif;color:#05242E}
 .yd2-gi{position:relative;aspect-ratio:352/282;border-radius:10px;overflow:hidden;background:#f6faf7}
-.yd2-gi img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .6s ease,transform .8s ease}
+.yd2-gi img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .7s ease,transform 2.6s cubic-bezier(.2,.7,.2,1)}
 .yd2-gdots{display:flex;align-items:center;gap:7px;margin-top:12px}
 .yd2-gdots span{margin-left:auto;font-size:12px;color:#05242E;opacity:.7}
 .yd2-ac{background:#fff;border-radius:16px;box-shadow:0 2px 14px rgba(5,36,46,.12);margin-bottom:16px;overflow:hidden}
