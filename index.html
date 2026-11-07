@@ -56,7 +56,7 @@ a:hover{color:#f6f1e4}
 .nh-glass:hover:before{transform:translateX(120%)}.nh-glass:hover{border-color:rgba(255,255,255,.4)}
 .nh-glass.nh-p{background:linear-gradient(135deg,rgba(255,255,255,.3),rgba(255,255,255,.1));border-color:rgba(255,255,255,.34);font-weight:500}
 .nh-glass.nh-sm{padding:10px 20px;font-size:14px;font-weight:500}
-.nh-stage{position:relative;min-height:790px}.nh-card{z-index:30 !important}
+.nh-stage{position:relative;min-height:790px;cursor:pointer}.nh-card{z-index:30 !important}
 @keyframes nhrise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 .nh-rv{animation:nhrise .9s cubic-bezier(.2,.7,.2,1) both}
 .nh-big{position:absolute;inset:0;margin:0;font-family:'Inter Tight',Inter,system-ui,sans-serif;font-weight:300;letter-spacing:-.055em;line-height:.88;font-size:var(--f);color:#f6f1e4;z-index:1;pointer-events:none}
@@ -242,7 +242,7 @@ a:hover{color:#f6f1e4}
 <div class="nh-l"><a class="nh-act" href="#">Home</a><a href="#work">Work</a><a href="/about">About</a></div>
 <div class="nh-r"><a class="nh-glass nh-sm" href="#contact">Contact me</a></div>
 </nav>
-<div class="nh-stage" onMouseMove="{{ stageMove }}" onMouseLeave="{{ stageLeave }}">
+<div class="nh-stage" onMouseMove="{{ stageMove }}" onMouseLeave="{{ stageLeave }}" onClick="{{ stageClick }}">
 <div class="nh-card" style="{{ cardStyle }}">
 <sc-for list="{{ slides }}" as="s" hint-placeholder-count="4">
 <div style="{{ s.style }}"><div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 36px 16px 14px; background: linear-gradient(180deg, rgba(5,5,5,0), rgba(5,5,5,0.75)); display: flex; flex-direction: column; gap: 2px"><div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #b9b4a8">{{ s.tag }}</div><div style="font-size: 17px; font-weight: 500; letter-spacing: -0.01em; color: #f6f1e4">{{ s.title }}</div></div></div>
@@ -536,9 +536,9 @@ class Component extends DCLogic {
     const idx = this.state.idx ?? 0, face = !!this.state.face, onStage = !!this.state.onStage;
     const px = this.state.px ?? 0, py = this.state.py ?? 0, sw = this.state.sw ?? 1300, sh = this.state.sh ?? 860;
     const data = [
-      { tag: 'Case study', title: 'Revolut', art: "linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6)), url(assets/17a26e5a1c0f3accbc27d294455eaa14.png) center 42%/cover no-repeat, #0b0b0e" },
-      { tag: 'Case study', title: 'Klivvr', art: "linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6)), url(assets/b0aab2affbe46b409fcc9a556b2c04e9.jpg) center/cover no-repeat, #0b0b0e" },
-      { tag: 'Case study', title: 'Goodground', art: "linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6)), url(assets/f539fbf2bbc4925498fbfcc71a0c0605.jpg) center/cover no-repeat, #0b0b0e" }
+      { href: '/revolut', tag: 'Case study', title: 'Revolut', art: "linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6)), url(assets/17a26e5a1c0f3accbc27d294455eaa14.png) center 42%/cover no-repeat, #0b0b0e" },
+      { href: '/klivvr', tag: 'Case study', title: 'Klivvr', art: "linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6)), url(assets/b0aab2affbe46b409fcc9a556b2c04e9.jpg) center/cover no-repeat, #0b0b0e" },
+      { href: '/goodground', tag: 'Case study', title: 'Goodground', art: "linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6)), url(assets/f539fbf2bbc4925498fbfcc71a0c0605.jpg) center/cover no-repeat, #0b0b0e" }
     ];
     const slides = data.map((d, i) => ({ tag: d.tag, title: d.title, style: 'position:absolute;inset:0;background:' + d.art + ';transition:opacity .8s ease;opacity:' + (i === idx && !face ? 1 : 0) }));
     const size = 220;
@@ -552,6 +552,10 @@ class Component extends DCLogic {
       this.setState({ onStage: true, face: f, px: e.clientX - r.left, py: e.clientY - r.top, sw: r.width, sh: r.height });
     };
     const stageLeave = () => this.setState({ onStage: false, face: false });
+    const stageClick = (e) => {
+      if (face || !data[idx] || (e.target && e.target.closest && e.target.closest('a,button,.nh-frame'))) return;
+      const a = document.createElement('a'); a.href = data[idx].href; document.body.appendChild(a); a.click(); a.remove();
+    };
     const x = this.state.x ?? 0, y = this.state.y ?? 0, on = !!this.state.on;
     const mask = 'radial-gradient(circle 120px at ' + x + 'px ' + y + 'px, #000 55%, rgba(0,0,0,0) 100%)';
     const hs = this.state, hr = hs.hr ?? 0, hcx = hs.hcx ?? 0, hcy = hs.hcy ?? 0, hopen = !!hs.hopen;
@@ -598,7 +602,7 @@ class Component extends DCLogic {
       fsCards, fsPrev, fsNext, fsMove, fsLeave, fsDot,
       wkCards, wkTrackStyle, wkPrevStyle, wkNextStyle, wkPrev, wkNext,
       pCards, pTitle: cur.t, pCat: cur.c, pStatus: cur.soon ? 'Coming soon' : 'Live', pStatusStyle: 'margin-top:6px;padding:6px 14px;border-radius:999px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;border:1px solid ' + (cur.soon ? 'rgba(255,255,255,0.22);color:#a7a29a' : 'rgba(63,198,198,0.6);color:#3fc6c6'), pNum: String(best + 1).padStart(2, '0'), pTotal: String(N).padStart(2, '0'), pBar, pDown, pMove, pUp, pLeave, pWheel,
-      slides, cardStyle, faceStyle, stageMove, stageLeave,
+      slides, cardStyle, faceStyle, stageMove, stageLeave, stageClick,
       onMove: (e) => {
         const r = e.currentTarget.getBoundingClientRect();
         this.setState({ x: e.clientX - r.left, y: e.clientY - r.top, on: true, face: true });
