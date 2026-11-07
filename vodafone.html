@@ -340,7 +340,7 @@ div[style*="gap: 6px"]:has(>div>span[style*="border-radius: 50%"]),div[style*="g
 .vfx-b:active{background:var(--pr);transform:scale(.98)}
 .vfx-b:disabled{background:var(--dbg);color:var(--dfg);border-color:var(--dbd);cursor:not-allowed;transform:none}
 .vfx-b.l{height:52px;padding:0 26px;font-size:16px}.vfx-b.m{height:42px;padding:0 20px;font-size:14px}.vfx-b.s{height:32px;padding:0 14px;font-size:12px;border-radius:6px}
-.vfx-b svg{width:1.15em;height:1.15em}
+.vfx-b{white-space:nowrap}.vfx-b svg{width:1.15em;height:1.15em}
 .vfx-spec{font-size:13px;color:#a7a29a;line-height:1.6}
 .vfx-spec code{font:inherit;color:#f6f1e4}
 .vfx-shots{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -352,8 +352,16 @@ div[style*="gap: 6px"]:has(>div>span[style*="border-radius: 50%"]),div[style*="g
 .vfx-zoom.open{display:flex}.vfx-zoom img{max-width:100%;max-height:100%;border-radius:12px;background:#fff}
 @media (max-width:900px){.vfx-card{padding:22px 18px}.vfx-shots{grid-template-columns:1fr}.vfx-info{grid-template-columns:1fr}.vfx-ctls label{width:100%}}
 
-@media (min-width:901px){.vfx{grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}.vfx-shots{grid-column:1/-1}.vfx-card{padding:24px}.vfx-card>p{margin-bottom:16px}.vfx-pal{grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:6px;margin-top:16px}.vfx-sw{height:52px;padding:5px 7px;font-size:10px;border-radius:9px}.vfx-info{margin-top:16px;gap:16px}.vfx-chip{width:76px;height:64px}.vfx-info b{font-size:20px}.vfx-stage{min-height:110px;padding:20px;margin:16px 0}.vfx-ctls{gap:8px}.vfx-ctls label{width:72px;font-size:11px}.vfx-tabs button,.vfx-ctls button{padding:6px 12px;font-size:12px}.vfx-shots img{max-height:230px;object-fit:cover;object-position:top left}}
+@media (min-width:901px){.vfx{grid-template-columns:1fr 1fr;gap:20px;margin-top:40px;align-items:start}.vfx-shots{grid-column:1/-1}.vfx-card{padding:24px}.vfx-card>p{margin-bottom:16px}.vfx-pal{grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:6px;margin-top:16px}.vfx-sw{height:52px;padding:5px 7px;font-size:10px;border-radius:9px}.vfx-info{margin-top:16px;gap:16px}.vfx-chip{width:76px;height:64px}.vfx-info b{font-size:20px}.vfx-stage{min-height:110px;padding:20px;margin:16px 0}.vfx-ctls{gap:8px}.vfx-ctls label{width:72px;font-size:11px}.vfx-tabs button,.vfx-ctls button{padding:6px 12px;font-size:12px}.vfx-shots img{max-height:230px;object-fit:cover;object-position:top left}}
 @media (max-width:900px){.vfx-stage{min-height:120px;padding:20px}.vfx-shots img{max-height:200px;object-fit:cover;object-position:top left}}
+
+.vfx-phone{width:240px;height:300px;border-radius:30px;border:6px solid #111;box-shadow:0 0 0 1px rgba(255,255,255,.18),0 18px 40px rgba(0,0,0,.35);background:var(--pb,#fff);padding:18px 16px 16px;display:flex;flex-direction:column;gap:9px;transition:background .3s;overflow:hidden}
+.vfx-phone i{display:block;flex:none;border-radius:6px;background:var(--pk,#E6E6E6)}
+.vfx-phone .kh{height:8px;width:36%;margin-bottom:6px}.vfx-phone .kt{height:16px;width:70%}.vfx-phone .kl{height:9px;width:100%}.vfx-phone .kw{width:60%}
+.vfx-blk{flex:none;height:56px;border-radius:12px;background:var(--pk,#E6E6E6);opacity:.7;margin-top:4px}
+.vfx-phone .vfx-b{margin-top:auto;width:100%;flex:none}
+.vfx-phone .vfx-b.s{width:auto;align-self:center}
+@media (min-width:901px){.vfx-stage{min-height:0;padding:18px}}
 </style>
 </helmet>
 <div class="cs" style="min-height:0">
@@ -373,7 +381,7 @@ div[style*="gap: 6px"]:has(>div>span[style*="border-radius: 50%"]),div[style*="g
 <div class="band"><h4>Design System 2.0</h4><p class="sub">A shared language for design and development.</p><div class="vf-split"><ul class="vf-list"><li><strong>Foundations.</strong> Typography, spacing, colour, elevation and iconography, defined once as variables so every screen stays connected to the system.</li><li><strong>Components.</strong> Buttons, inputs, chips, tabs, cells, bottom sheets, navigation bars, forms and empty states, with their states and right to left Arabic versions.</li><li><strong>Guides.</strong> A designer’s guide, a developer’s guide and naming conventions, so both sides use the same words for the same things.</li><li><strong>Training.</strong> A hands-on session on variables and Figma housekeeping, with activities on colour and spacing.</li></ul><div class="vf-card"><small>Training &nbsp;·&nbsp; Design system variables</small><div><span>Name</span><b>Variables</b></div><div><span>What it means</span><p>Predefined tokens that represent colour, spacing, typography, effects and more. The building blocks of the design language.</p></div><div><span>Why it matters</span><p>Apply a variable instead of a value, and it stays connected to the system.</p></div></div></div></div>
 <div class="band"><h4>Explore the system</h4><p class="sub">Colour and components from the library. Try them.</p><div class="vfx">
 <div class="vfx-card"><h5>Colour palette: samples</h5><p>A small sample of the full palette: four families, five shades each. Pick a family, then a swatch to see its value and contrast.</p><div class="vfx-tabs" id="vfx-tabs"></div><div class="vfx-pal" id="vfx-pal"></div><div class="vfx-info"><div class="vfx-chip" id="vfx-chip"></div><div id="vfx-meta"></div></div></div>
-<div class="vfx-card"><h5>Button</h5><p>A live version of the button component, built from the palette. Hover it, press it, change it.</p><div class="vfx-stage" id="vfx-stage"><button class="vfx-b l" id="vfx-b" type="button"></button></div><div class="vfx-ctls" id="vfx-ctls"></div><p class="vfx-spec" id="vfx-spec" style="margin:18px 0 0"></p></div>
+<div class="vfx-card"><h5>Button</h5><p>A live version of the button component, built from the palette. Hover it, press it, change it.</p><div class="vfx-stage" id="vfx-stage"><div class="vfx-phone" id="vfx-phone"><i class="kh"></i><i class="kt"></i><i class="kl"></i><i class="kl kw"></i><div class="vfx-blk"></div><button class="vfx-b l" id="vfx-b" type="button"></button></div></div><p class="vfx-spec" style="margin:-6px 0 14px;font-size:12px">Shown on an illustrative screen.</p><div class="vfx-ctls" id="vfx-ctls"></div><p class="vfx-spec" id="vfx-spec" style="margin:18px 0 0"></p></div>
 <div class="vfx-shots"><figure data-zoom="assets/a417241cc8c6f1172da6862e4a025f23.png"><img src="assets/a417241cc8c6f1172da6862e4a025f23.png" alt="Main colour palette from the Vodafone design system"><figcaption>The full palette, in the library. Tap to enlarge.</figcaption></figure><figure data-zoom="assets/b4786cffcfbf22ab8b5604f4d9791a08.png"><img src="assets/b4786cffcfbf22ab8b5604f4d9791a08.png" alt="Button variants and states in English and Arabic"><figcaption>Button variants and states, English and Arabic. Tap to enlarge.</figcaption></figure></div>
 </div><div class="vfx-zoom" id="vfx-zoom"><img alt=""></div></div>
 <div class="sec"><div class="lab"><span>03 How I worked</span><h3>Structure with participation</h3></div><div class="body"><p>My approach combined structure with participation. I didn’t want process to become a set of rigid steps; I wanted it to help people do better work together.</p><p>That meant creating clarity without limiting exploration, making space for different perspectives and supporting designers throughout the process rather than only reviewing their final output.</p></div></div>
@@ -385,7 +393,7 @@ div[style*="gap: 6px"]:has(>div>span[style*="border-radius: 50%"]),div[style*="g
 </div>
 <dc-import name="AskMalak" hint-size="0px,0px"></dc-import>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":10300}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":10600}}'>
 class Component extends DCLogic {
   componentDidMount() {
     const P={Neutrals:{'0':'FFFFFF','50':'FDFDFD','100':'F8F8F8','200':'F2F2F2','300':'E6E6E6','400':'D5D5D5','500':'B1B1B1','600':'909090','700':'6C6C6C','800':'464646','900':'222222','950':'1A1A1A','1000':'0D0D0D'},
@@ -423,7 +431,7 @@ class Component extends DCLogic {
       b.className='vfx-b '+stt.sz; b.disabled=stt.dis;
       const ar=stt.dir==='ar'; b.dir=ar?'rtl':'ltr';
       b.innerHTML=(stt.ic==='left'?ico:'')+`<span>${ar?'اسم الزر':'Button label'}</span>`+(stt.ic==='right'?ico:'');
-      stg.style.background=d?'#464646':'#F2F2F2';
+      stg.style.background=d?'#464646':'#F2F2F2'; const ph=$('vfx-phone'); ph.style.setProperty('--pb',d?'#1A1A1A':'#FFFFFF'); ph.style.setProperty('--pk',d?'rgba(255,255,255,.16)':'#E6E6E6'); ph.dir=ar?'rtl':'ltr';
       const seg=(k,o)=>`<div><label>${o[0]}</label>${o[1].map(([val,t])=>`<button type="button" data-k="${k}" data-v="${val}" class="${String(stt[k])===String(val)?'on':''}">${t}</button>`).join('')}</div>`;
       ctl.innerHTML=seg('v',['Style',[['filled','Filled'],['outline','Outline'],['text','Text']]])+seg('sz',['Size',[['l','Large'],['m','Medium'],['s','Small']]])+seg('ic',['Icon',[['none','None'],['left','Left'],['right','Right']]])+seg('dir',['Language',[['en','English'],['ar','Arabic']]])+seg('dark',['Surface',[[false,'Light'],[true,'Dark']]])+seg('dis',['State',[[false,'Active'],[true,'Disabled']]]);
       $('vfx-spec').innerHTML=`Fill <code>${v==='filled'?'red-500':'turquoise-500'}</code> &nbsp;·&nbsp; Hover <code>${v==='filled'?'red-600':'turquoise-50'}</code> &nbsp;·&nbsp; Pressed <code>${v==='filled'?'red-700':'turquoise-100'}</code> &nbsp;·&nbsp; Disabled <code>${v==='filled'?'neutral-400':'neutral-500'}</code>`;
