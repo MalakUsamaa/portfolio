@@ -233,7 +233,7 @@ a{color:inherit;text-decoration:none}
 .yd2-wx{width:100%;height:100%;object-fit:cover;border-radius:18px;display:block}
 .yd2-ac{background:#fff;border-radius:16px;box-shadow:0 2px 14px rgba(5,36,46,.12);margin-bottom:16px;overflow:hidden}
 .yd2-ah{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;user-select:none}
-.yd2-ah b{font-size:16px;font-weight:500}
+.yd2-ah b{font-size:16px;font-weight:500;flex:1;min-width:0}
 .yd2-ah u{text-decoration:none;color:#46BD98}
 .yd2-ah span{display:flex;transition:transform .25s}
 .yd2-ab{padding:0 24px 22px}
@@ -256,8 +256,8 @@ a{color:inherit;text-decoration:none}
 .yd2-is p{margin:0;font-size:12px;line-height:1.65;color:#33484d}
 .yd2-none{margin:0;font-size:13px;color:#4b5f64}
 @media (max-width:900px){.yd2-top{grid-template-columns:1fr}.yd2-wx{height:240px}.yd2-nus,.yd2-iss{grid-template-columns:1fr}.yd2-in{grid-template-columns:1fr}.yd2-in img{width:100%;height:150px}.yd2-nav span{display:none}.yd2{padding:12px 14px 20px}}
-.yq-an{position:absolute;inset:0;animation:none !important;background:#fff}
-.yq-dash{position:absolute;inset:0;overflow-y:auto;background:#fff;animation:yqin .6s 3.1s both}
+.yq-an{position:relative;background:#fff;max-height:600px;overflow:hidden;animation:yqh .01s 3.1s both !important}@keyframes yqh{to{max-height:20000px;overflow:visible}}
+.yq-dash{position:relative;background:#fff;animation:yqin .6s 3.1s both}
 .yq-dash img{width:100%;display:block}
 @keyframes yqin{from{opacity:0;visibility:hidden}to{opacity:1;visibility:visible}}
 .yq-ld{position:absolute;inset:0;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:0 24px;text-align:center;z-index:2;animation:yqout .5s 3s both}
@@ -500,7 +500,7 @@ class Component extends DCLogic {
       out['cis' + i] = on ? 'background:#46BD98;color:#fff;' : '';
       out['cik' + i] = on ? '' : 'display:none;';
     }
-    out.yqS = sp === 5 ? 'height:700px;' : '';
+    out.yqS = '';
     out.yqR = '';
     out.otOn = is.includes(7) ? '' : 'display:none;';
     for (let i = 0; i < 6; i++) {
