@@ -313,6 +313,44 @@ div[style*="gap: 6px"]:has(>div>span[style*="border-radius: 50%"]),div[style*="g
 @media (min-width:901px){.glance.vf2{grid-template-columns:repeat(2,1fr)}.cols4.vf8{grid-template-columns:repeat(4,1fr)}}
 @media (max-width:900px){.vf-split{grid-template-columns:1fr;gap:32px}.vf-card{padding:26px 22px 30px}}
 .vf-shot{margin:56px auto 0;max-width:1040px}.vf-shot img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.1)}.vf-shot figcaption{margin-top:14px;font-size:13px;opacity:.6;text-align:center}@media (max-width:900px){.vf-shot{margin-top:36px}}
+
+.vfx{margin-top:56px;display:grid;gap:28px}
+.vfx-card{border:1px solid rgba(255,255,255,.12);background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.015));border-radius:22px;padding:32px}
+.vfx-card h5{margin:0 0 6px;font-size:22px;font-weight:400;color:#f6f1e4}
+.vfx-card>p{margin:0 0 24px;color:#a7a29a;font-size:15px;line-height:1.5}
+.vfx-tabs,.vfx-ctl{display:flex;flex-wrap:wrap;gap:8px}
+.vfx-tabs button,.vfx-ctls button{font:inherit;font-size:13px;color:#a7a29a;background:transparent;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 16px;cursor:pointer;transition:all .2s}
+.vfx-tabs button:hover,.vfx-ctls button:hover{color:#f6f1e4;border-color:rgba(255,255,255,.4)}
+.vfx-tabs button.on,.vfx-ctls button.on{color:#0b0b0e;background:#f6f1e4;border-color:#f6f1e4}
+.vfx-pal{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:10px;margin-top:22px}
+.vfx-sw{height:84px;border-radius:12px;border:1px solid rgba(255,255,255,.1);cursor:pointer;position:relative;display:flex;align-items:flex-end;padding:8px 10px;font-size:11px;transition:transform .2s}
+.vfx-sw:hover{transform:translateY(-3px)}
+.vfx-sw.on{outline:2px solid #f6f1e4;outline-offset:3px}
+.vfx-info{margin-top:22px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.vfx-chip{width:120px;height:96px;border-radius:14px;border:1px solid rgba(255,255,255,.14)}
+.vfx-info b{display:block;font-weight:400;font-size:24px;color:#f6f1e4}
+.vfx-info span{display:block;color:#a7a29a;font-size:14px;margin-top:6px}
+.vfx-info em{font-style:normal;color:#f6f1e4}
+.vfx-stage{border-radius:16px;min-height:200px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:36px 20px;margin:22px 0;transition:background .3s;border:1px solid rgba(255,255,255,.1)}
+.vfx-ctls{display:grid;gap:14px}
+.vfx-ctls>div{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.vfx-ctls label{width:84px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#a7a29a}
+.vfx-b{font:inherit;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;border:1.5px solid transparent;cursor:pointer;font-weight:500;transition:background .15s,border-color .15s,color .15s,transform .1s;background:var(--bg);color:var(--fg);border-color:var(--bd)}
+.vfx-b:hover{background:var(--hv);border-color:var(--hb,var(--bd))}
+.vfx-b:active{background:var(--pr);transform:scale(.98)}
+.vfx-b:disabled{background:var(--dbg);color:var(--dfg);border-color:var(--dbd);cursor:not-allowed;transform:none}
+.vfx-b.l{height:52px;padding:0 26px;font-size:16px}.vfx-b.m{height:42px;padding:0 20px;font-size:14px}.vfx-b.s{height:32px;padding:0 14px;font-size:12px;border-radius:6px}
+.vfx-b svg{width:1.15em;height:1.15em}
+.vfx-spec{font-size:13px;color:#a7a29a;line-height:1.6}
+.vfx-spec code{font:inherit;color:#f6f1e4}
+.vfx-shots{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.vfx-shots figure{margin:0;cursor:zoom-in}
+.vfx-shots img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:#f4f4f4;transition:transform .3s}
+.vfx-shots figure:hover img{transform:scale(1.01)}
+.vfx-shots figcaption{margin-top:10px;font-size:13px;color:#a7a29a}
+.vfx-zoom{position:fixed;inset:0;z-index:9999;background:rgba(5,5,5,.92);display:none;align-items:center;justify-content:center;padding:28px;cursor:zoom-out}
+.vfx-zoom.open{display:flex}.vfx-zoom img{max-width:100%;max-height:100%;border-radius:12px;background:#fff}
+@media (max-width:900px){.vfx-card{padding:22px 18px}.vfx-shots{grid-template-columns:1fr}.vfx-info{grid-template-columns:1fr}.vfx-ctls label{width:100%}}
 </style>
 </helmet>
 <div class="cs" style="min-height:0">
@@ -330,6 +368,11 @@ div[style*="gap: 6px"]:has(>div>span[style*="border-radius: 50%"]),div[style*="g
 <div class="band"><h4>What approval means</h4><p class="sub">A shared checklist, so feedback is about the work and never personal.</p><div class="glance vf2" style="margin-top:0"><div><span>Approved when</span><p>The design system is followed, or exceptions are justified.</p><p>The flow is smooth and user-friendly.</p><p>There is clear user logic or testing feedback.</p><p>The file is tidy and ready for developer handoff.</p></div><div><span>Sent back when</span><p>Basic design system rules are broken without reason.</p><p>Critical user paths are confusing or incomplete.</p><p>No user reasoning or testing is applied.</p><p>The file is disorganised or not ready to ship.</p></div></div></div>
 <div class="band"><h4>Rolling it out</h4><p class="sub">A process only works if the team adopts it.</p><div class="cols4"><div><span>01</span><b>Documentation</b><p>A central reference covering ticket types, touchpoints and the weekly rhythm, with real examples.</p></div><div><span>02</span><b>Templates and tools</b><p>A one-pager template, ticket templates with clear statuses and message templates for async reviews.</p></div><div><span>03</span><b>Kickoffs</b><p>One for the design team on process and expectations. One for product owners and the product team on briefs and how to work with design.</p></div><div><span>04</span><b>Retrospectives</b><p>A quarterly retrospective on what is working, what is blocked and what to adjust.</p></div></div></div>
 <div class="band"><h4>Design System 2.0</h4><p class="sub">A shared language for design and development.</p><div class="vf-split"><ul class="vf-list"><li><strong>Foundations.</strong> Typography, spacing, colour, elevation and iconography, defined once as variables so every screen stays connected to the system.</li><li><strong>Components.</strong> Buttons, inputs, chips, tabs, cells, bottom sheets, navigation bars, forms and empty states, with their states and right to left Arabic versions.</li><li><strong>Guides.</strong> A designer’s guide, a developer’s guide and naming conventions, so both sides use the same words for the same things.</li><li><strong>Training.</strong> A hands-on session on variables and Figma housekeeping, with activities on colour and spacing.</li></ul><div class="vf-card"><small>Training &nbsp;·&nbsp; Design system variables</small><div><span>Name</span><b>Variables</b></div><div><span>What it means</span><p>Predefined tokens that represent colour, spacing, typography, effects and more. The building blocks of the design language.</p></div><div><span>Why it matters</span><p>Apply a variable instead of a value, and it stays connected to the system.</p></div></div></div></div>
+<div class="band"><h4>Explore the system</h4><p class="sub">Colour and components from the library. Try them.</p><div class="vfx">
+<div class="vfx-card"><h5>Colour palette</h5><p>Seven families, each built as a scale. Pick a family, then a swatch to see its value and contrast.</p><div class="vfx-tabs" id="vfx-tabs"></div><div class="vfx-pal" id="vfx-pal"></div><div class="vfx-info"><div class="vfx-chip" id="vfx-chip"></div><div id="vfx-meta"></div></div></div>
+<div class="vfx-card"><h5>Button</h5><p>A live version of the button component, built from the palette. Hover it, press it, change it.</p><div class="vfx-stage" id="vfx-stage"><button class="vfx-b l" id="vfx-b" type="button"></button></div><div class="vfx-ctls" id="vfx-ctls"></div><p class="vfx-spec" id="vfx-spec" style="margin:18px 0 0"></p></div>
+<div class="vfx-shots"><figure data-zoom="assets/a417241cc8c6f1172da6862e4a025f23.png"><img src="assets/a417241cc8c6f1172da6862e4a025f23.png" alt="Main colour palette from the Vodafone design system"><figcaption>Main colour palette, in the library. Tap to enlarge.</figcaption></figure><figure data-zoom="assets/b4786cffcfbf22ab8b5604f4d9791a08.png"><img src="assets/b4786cffcfbf22ab8b5604f4d9791a08.png" alt="Button variants and states in English and Arabic"><figcaption>Button variants and states, English and Arabic. Tap to enlarge.</figcaption></figure></div>
+</div><div class="vfx-zoom" id="vfx-zoom"><img alt=""></div></div>
 <div class="sec"><div class="lab"><span>03 How I worked</span><h3>Structure with participation</h3></div><div class="body"><p>My approach combined structure with participation. I didn’t want process to become a set of rigid steps; I wanted it to help people do better work together.</p><p>That meant creating clarity without limiting exploration, making space for different perspectives and supporting designers throughout the process rather than only reviewing their final output.</p></div></div>
 <div class="sec"><div class="lab"><span>04 The impact</span><h3>Better alignment, clearer framework</h3></div><div class="body"><p>My contribution helped establish a more structured design approach, encouraged stronger collaboration between stakeholders and supported the development of designers within the team.</p><p>The impact was qualitative: better alignment, more intentional design conversations and a clearer framework for approaching product challenges.</p></div></div>
 <div class="band"><h4>What colleagues say</h4><p class="sub">Written feedback from the team.</p><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px"><div style="border-top:1px solid rgba(255,255,255,.14);padding-top:28px;display:flex;flex-direction:column;justify-content:space-between"><p style="margin:0 0 28px;font-size:19px;line-height:1.55;color:#f6f1e4;font-weight:300">&ldquo;Your passion for helping others and the way you communicate feedback is both smart and thoughtful.&rdquo;</p><p style="margin:0;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#a7a29a">Colleague feedback</p></div><div style="border-top:1px solid rgba(255,255,255,.14);padding-top:28px;display:flex;flex-direction:column;justify-content:space-between"><p style="margin:0 0 28px;font-size:19px;line-height:1.55;color:#f6f1e4;font-weight:300">&ldquo;Not gatekeeping any information you have, you always want people to learn more. You are not like any ordinary leader, you are the one who actually leads the whole pack to success.&rdquo;</p><p style="margin:0;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#a7a29a">Colleague feedback</p></div><div style="border-top:1px solid rgba(255,255,255,.14);padding-top:28px;display:flex;flex-direction:column;justify-content:space-between"><p style="margin:0 0 28px;font-size:19px;line-height:1.55;color:#f6f1e4;font-weight:300">&ldquo;You have a strong presence and a significant impact wherever you go.&rdquo;</p><p style="margin:0;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#a7a29a">Colleague feedback</p></div></div></div>
@@ -339,8 +382,61 @@ div[style*="gap: 6px"]:has(>div>span[style*="border-radius: 50%"]),div[style*="g
 </div>
 <dc-import name="AskMalak" hint-size="0px,0px"></dc-import>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":9050}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":9900}}'>
 class Component extends DCLogic {
+  componentDidMount() {
+    const P={Neutrals:{'0':'FFFFFF','50':'FDFDFD','100':'F8F8F8','200':'F2F2F2','300':'E6E6E6','400':'D5D5D5','500':'B1B1B1','600':'909090','700':'6C6C6C','800':'464646','900':'222222','950':'1A1A1A','1000':'0D0D0D'},
+      Red:{'50':'FDE6E6','100':'F7B0B0','200':'F48A8A','300':'EE5454','400':'EB3333','500':'E60000','600':'D10000','700':'A30000','800':'7F0000','900':'610000'},
+      Turquoise:{'50':'E6F0F2','100':'B0D1D6','200':'8ABAC3','300':'549BA7','400':'338796','500':'00697C','600':'006071','700':'004B58','800':'003A44','900':'002C34'},
+      Orange:{'50':'FDEFE6','100':'F9CEB0','200':'F6B68A','300':'F29554','400':'EF8133','500':'EB6100','600':'CC4B02','700':'A74500','800':'813500','900':'632900'},
+      Green:{'50':'E6F3E6','100':'B0DBB0','200':'8AC98A','300':'54B154','400':'33A133','500':'008A00','600':'007E00','700':'006200','800':'004C00','900':'003A00'},
+      Yellow:{'50':'FFFAE6','100':'FFEFB0','200':'FFE78A','300':'FEDC54','400':'FED533','500':'FECB00','600':'E7B900','700':'B49000','800':'8C7000','900':'6B5500'},
+      Blue:{'50':'E6F1FA','100':'B0D5EF','200':'8AC0E7','300':'54A3DC','400':'3391D5','500':'0076CB','600':'006BB9','700':'005490','800':'004170','900':'003255'}};
+    const $=(id)=>document.getElementById(id);
+    const lum=(h)=>{const c=[0,2,4].map(i=>parseInt(h.substr(i,2),16)/255).map(v=>v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4));return .2126*c[0]+.7152*c[1]+.0722*c[2];};
+    const cr=(a,b)=>{const x=lum(a),y=lum(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05);};
+    const lvl=(r)=>r>=7?'AAA':r>=4.5?'AA':r>=3?'AA large text':'below AA';
+    const st={fam:'Red',key:'500'};
+    const drawPal=()=>{
+      const tabs=$('vfx-tabs'),pal=$('vfx-pal'); if(!tabs||!pal) return;
+      tabs.innerHTML=Object.keys(P).map(f=>`<button type="button" data-f="${f}" class="${f===st.fam?'on':''}">${f}</button>`).join('');
+      pal.innerHTML=Object.entries(P[st.fam]).map(([k,h])=>`<div class="vfx-sw ${k===st.key?'on':''}" data-k="${k}" style="background:#${h};color:${lum(h)>.4?'#111':'#fff'}">${k}</div>`).join('');
+      if(!P[st.fam][st.key]) st.key=Object.keys(P[st.fam])[Math.min(5,Object.keys(P[st.fam]).length-1)];
+      const h=P[st.fam][st.key]; $('vfx-chip').style.background='#'+h;
+      const w=cr(h,'FFFFFF'),b=cr(h,'000000');
+      $('vfx-meta').innerHTML=`<b>${st.fam.toLowerCase().replace('neutrals','neutral')}-${st.key}</b><span><em>#${h}</em> &nbsp;·&nbsp; <a href="#" data-copy="#${h}" style="text-decoration:underline;text-underline-offset:3px">Copy</a></span><span>On white <em>${w.toFixed(1)}:1</em> ${lvl(w)} &nbsp;·&nbsp; On black <em>${b.toFixed(1)}:1</em> ${lvl(b)}</span>`;
+    };
+    const stt={v:'filled',sz:'l',dir:'en',ic:'none',dark:false,dis:false};
+    const R='E60000',R6='D10000',R7='A30000',T='00697C';
+    const ico='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>';
+    const drawBtn=()=>{
+      const b=$('vfx-b'),stg=$('vfx-stage'),ctl=$('vfx-ctls'); if(!b) return;
+      const d=stt.dark, v=stt.v, V={};
+      if(v==='filled'){Object.assign(V,{bg:'#'+R,fg:'#fff',bd:'transparent',hv:'#'+R6,pr:'#'+R7,dbg:d?'rgba(255,255,255,.14)':'#D5D5D5',dfg:d?'rgba(255,255,255,.4)':'#909090',dbd:'transparent'});}
+      else if(v==='outline'){Object.assign(V,{bg:'transparent',fg:d?'#fff':'#'+T,bd:d?'#fff':'#'+T,hv:d?'rgba(255,255,255,.14)':'#E6F0F2',pr:d?'rgba(255,255,255,.24)':'#B0D1D6',dbg:'transparent',dfg:d?'rgba(255,255,255,.4)':'#B1B1B1',dbd:d?'rgba(255,255,255,.25)':'#D5D5D5'});}
+      else {Object.assign(V,{bg:'transparent',fg:d?'#fff':'#'+T,bd:'transparent',hv:d?'rgba(255,255,255,.12)':'#E6F0F2',pr:d?'rgba(255,255,255,.22)':'#B0D1D6',dbg:'transparent',dfg:d?'rgba(255,255,255,.4)':'#B1B1B1',dbd:'transparent'});}
+      for(const k in V) b.style.setProperty('--'+k,V[k]);
+      b.className='vfx-b '+stt.sz; b.disabled=stt.dis;
+      const ar=stt.dir==='ar'; b.dir=ar?'rtl':'ltr';
+      b.innerHTML=(stt.ic==='left'?ico:'')+`<span>${ar?'اسم الزر':'Button label'}</span>`+(stt.ic==='right'?ico:'');
+      stg.style.background=d?'#464646':'#F2F2F2';
+      const seg=(k,o)=>`<div><label>${o[0]}</label>${o[1].map(([val,t])=>`<button type="button" data-k="${k}" data-v="${val}" class="${String(stt[k])===String(val)?'on':''}">${t}</button>`).join('')}</div>`;
+      ctl.innerHTML=seg('v',['Style',[['filled','Filled'],['outline','Outline'],['text','Text']]])+seg('sz',['Size',[['l','Large'],['m','Medium'],['s','Small']]])+seg('ic',['Icon',[['none','None'],['left','Left'],['right','Right']]])+seg('dir',['Language',[['en','English'],['ar','Arabic']]])+seg('dark',['Surface',[[false,'Light'],[true,'Dark']]])+seg('dis',['State',[[false,'Active'],[true,'Disabled']]]);
+      $('vfx-spec').innerHTML=`Fill <code>${v==='filled'?'red-500':'turquoise-500'}</code> &nbsp;·&nbsp; Hover <code>${v==='filled'?'red-600':'turquoise-50'}</code> &nbsp;·&nbsp; Pressed <code>${v==='filled'?'red-700':'turquoise-100'}</code> &nbsp;·&nbsp; Disabled <code>${v==='filled'?'neutral-400':'neutral-500'}</code>`;
+    };
+    this._vfClick=(e)=>{
+      const t=e.target;
+      const f=t.closest&&t.closest('[data-f]'); if(f&&f.closest('#vfx-tabs')){st.fam=f.dataset.f; st.key=P[st.fam]['500']?'500':'0'; drawPal(); return;}
+      const sw=t.closest&&t.closest('.vfx-sw'); if(sw){st.key=sw.dataset.k; drawPal(); return;}
+      const cp=t.closest&&t.closest('[data-copy]'); if(cp){e.preventDefault(); const v=cp.dataset.copy; try{navigator.clipboard.writeText(v).then(()=>{cp.textContent='Copied'},()=>{cp.textContent=v});}catch(x){cp.textContent=v;} return;}
+      const bk=t.closest&&t.closest('#vfx-ctls [data-k]'); if(bk){const k=bk.dataset.k,v=bk.dataset.v; stt[k]=(v==='true'?true:v==='false'?false:v); drawBtn(); return;}
+      const z=t.closest&&t.closest('[data-zoom]'); const zb=$('vfx-zoom');
+      if(z&&zb){zb.querySelector('img').src=z.dataset.zoom; zb.classList.add('open'); return;}
+      if(zb&&t.closest('#vfx-zoom')) zb.classList.remove('open');
+    };
+    document.addEventListener('click',this._vfClick);
+    drawPal(); drawBtn();
+  }
   renderVals() {
     return {};
   }
