@@ -425,7 +425,7 @@ class Component extends DCLogic {
     const wait = (ms) => new Promise((r) => setTimeout(r, ms));
     const S = (o) => this.setState(o);
     (async () => {
-      S({ sp: 0, fAd: '', fSt: '', fPc: '', fNm: '', fSz: 100, fUn: false, fGr: 1, fIs: [3, 5, 7], fOt: '' });
+      S({ sp: 0, fAd: '', fSt: '', fPc: '', fNm: '', fSz: 100, fUn: false, fGr: -1, fIs: [3, 5, 7], fOt: '' });
       await wait(1800); if (!ok()) return;
       S({ sp: 1 }); await wait(800); if (!ok()) return;
       const nm = 'Sam';
@@ -490,7 +490,7 @@ class Component extends DCLogic {
     out.szOff = un ? 'opacity:.4;pointer-events:none;' : '';
     out.szMsg = un ? 'No worries. We will check from above.' : sz < 40 ? 'A neat little patch.' : sz < 150 ? 'Wow you are about as big as a tennis court!' : 'That is a lot of lawn.';
     out.unBox = un ? 'background:#46BD98;border-color:#46BD98;box-shadow:inset 0 0 0 3px #fff;' : '';
-    const gs = st.fGr ?? 1;
+    const gs = st.fGr ?? -1;
     for (let i = 0; i < 7; i++) { out['sg' + i] = set('fGr', i); out['sgk' + i] = gs === i ? '' : 'display:none;'; }
     const is = st.fIs ?? [3, 5, 7];
     for (let i = 0; i < 8; i++) {
@@ -521,7 +521,7 @@ class Component extends DCLogic {
     const nm0 = (st.fNm || '').trim();
     out.dName = nm0 ? nm0 : 'there';
     out.dSize = un ? 'To be checked' : sz + ' m2';
-    out.dGrass = gi[gs] === 'Other' ? 'Not sure' : gi[gs];
+    out.dGrass = gs < 0 || gi[gs] === 'Other' ? 'Not sure' : gi[gs];
     const sel = is.slice().sort((x, y) => x - y);
     out.dProb = sel.length ? sel.map((x) => issueNames[x]).slice(0, 3).join(', ') : 'None';
     for (let i = 0; i < 3; i++) {
