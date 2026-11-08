@@ -579,7 +579,7 @@ class Component extends DCLogic {
       const cur = st['gv' + g] ?? (g === 3 ? 2 : 2);
       for (let j = 0; j < NN[g]; j++) {
         const on = j === cur;
-        out['gvo' + g + '_' + j] = 'opacity:' + (on ? 1 : 0) + ';';
+        out['gvo' + g + '_' + j] = 'opacity:' + (j <= cur ? 1 : 0) + ';';
         out['gvd' + g + '_' + j] = on ? 'width:24px;background:#EF6A6A;' : (j < cur && g < 3 ? 'background:#EF6A6A;opacity:.45;' : '');
         out['gvc' + g + '_' + j] = () => this.setState({ ['gv' + g]: j, ['gt' + g]: true });
       }
@@ -588,7 +588,7 @@ class Component extends DCLogic {
     }
     const wcur = st.wxI ?? 0;
     for (let j = 0; j < 5; j++) {
-      out['wxo' + j] = 'opacity:' + (j === wcur ? 1 : 0) + ';';
+      out['wxo' + j] = 'opacity:' + (j <= wcur ? 1 : 0) + ';';
       out['wxd' + j] = j === wcur ? 'width:22px;background:#fff;' : '';
       out['wxc' + j] = () => this.setState({ wxI: j, wxT: true });
     }
