@@ -344,6 +344,7 @@ a:hover{color:#f6f1e4}
 <div style="font-family: 'Inter Tight', Inter, sans-serif; font-weight: 300; font-style: italic; font-size: clamp(48px, 6vw, 96px); line-height: 1; letter-spacing: -0.04em; color: #D9C8A6">Tell me about it</div>
 </div>
 <div class="cf" style="display: flex; flex-direction: column; gap: 14px">
+<input type="text" data-f="site" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px">
 <input type="text" data-f="first" placeholder="First name *" autocomplete="given-name" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
 <input type="text" data-f="last" placeholder="Last name (optional)" autocomplete="family-name" style="box-sizing: border-box; width: 100%; padding: 18px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.04); color: #f6f1e4; font-family: Inter, sans-serif; font-size: 15px; outline: none">
@@ -570,10 +571,24 @@ class Component extends DCLogic {
       const first = g('first'), last = g('last'), email = g('email'), phone = g('phone'), looking = g('looking'), more = g('more');
       if (!first || !email || !looking) { err.textContent = 'Please add your first name, email and what you are looking for.'; return; }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = 'Please check your email address.'; return; }
-      err.textContent = 'Opening your email app with your message ready to send.';
-      const body = 'Name: ' + first + (last ? ' ' + last : '') + '\nEmail: ' + email + (phone ? '\nPhone: ' + phone : '') + '\nLooking for: ' + looking + (more ? '\n\n' + more : '');
-      const a = document.createElement('a'); a.href = 'mailto:Malak@mpavida.com?subject=' + encodeURIComponent('Website enquiry: ' + looking) + '&body=' + encodeURIComponent(body);
-      document.body.appendChild(a); a.click(); a.remove();
+      if ((g('site') || '')) { err.textContent = 'Thank you. I will reply soon.'; return; }
+      const btn = e.currentTarget, label = btn.textContent; btn.textContent = 'Sending'; btn.style.pointerEvents = 'none'; err.textContent = '';
+      const fallback = () => {
+        err.textContent = 'Could not send from here. Opening your email app instead.';
+        const body = 'Name: ' + first + (last ? ' ' + last : '') + '\nEmail: ' + email + (phone ? '\nPhone: ' + phone : '') + '\nLooking for: ' + looking + (more ? '\n\n' + more : '');
+        const a = document.createElement('a'); a.href = 'mailto:Malak@mpavida.com?subject=' + encodeURIComponent('Website enquiry: ' + looking) + '&body=' + encodeURIComponent(body);
+        document.body.appendChild(a); a.click(); a.remove();
+      };
+      fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ access_key: 'a8f9018c-4782-44dd-9579-1c43864784e1', subject: 'Website enquiry: ' + looking, from_name: 'malakusama.com', name: first + (last ? ' ' + last : ''), email: email, phone: phone, looking_for: looking, message: more || '(no message)' }) })
+        .then((r) => r.json())
+        .then((j) => {
+          if (!j || !j.success) throw new Error('send failed');
+          err.textContent = 'Thank you. Your message is on its way and I will reply soon.';
+          ['first', 'last', 'email', 'phone', 'more'].forEach((k) => { const el = f.querySelector('[data-f="' + k + '"]'); if (el) el.value = ''; });
+          const sel = f.querySelector('[data-f="looking"]'); if (sel) sel.selectedIndex = 0;
+        })
+        .catch(fallback)
+        .then(() => { btn.textContent = label; btn.style.pointerEvents = ''; });
     };
     const stageClick = (e) => {
       if (face || !data[idx] || (e.target && e.target.closest && e.target.closest('a,button,.nh-frame'))) return;

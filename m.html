@@ -204,7 +204,7 @@ Malak was dedicated to delivering high-quality works. She’s truly a user exper
 <footer class="ft" id="contact">
 <h2 class="big rvl">Have a project?<em>Tell me about it</em></h2>
 <p class="fs rvl">Ask my chat anything about my work, or send me a note.</p>
-<div class="fb"><a class="bt p" href="mailto:Malak@mpavida.com">Email me</a><a class="bt" href="https://www.linkedin.com/in/malakusama/">Message on LinkedIn</a></div>
+<div class="cf" style="margin-top:34px;display:flex;flex-direction:column;gap:12px"><input type="text" data-f="site" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"><input type="text" data-f="first" placeholder="Name *" autocomplete="name" style="box-sizing:border-box;width:100%;height:54px;padding:0 18px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#f6f1e4;font:400 16px Inter,sans-serif;outline:none"><input type="email" data-f="email" placeholder="Email *" autocomplete="email" style="box-sizing:border-box;width:100%;height:54px;padding:0 18px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#f6f1e4;font:400 16px Inter,sans-serif;outline:none"><select data-f="looking" style="box-sizing:border-box;width:100%;height:54px;padding:0 18px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#f6f1e4;font:400 16px Inter,sans-serif;outline:none;appearance:none;-webkit-appearance:none"><option value="" selected disabled style="background:#0b0b0e;color:#a7a29a">What are you looking for? *</option><option value="Full-time opportunity" style="background:#0b0b0e;color:#f6f1e4">Full-time opportunity</option><option value="Product design consultancy" style="background:#0b0b0e;color:#f6f1e4">Product design consultancy</option><option value="Product strategy" style="background:#0b0b0e;color:#f6f1e4">Product strategy</option><option value="Something else" style="background:#0b0b0e;color:#f6f1e4">Something else</option></select><textarea data-f="more" rows="4" placeholder="Tell me a little more" style="box-sizing:border-box;width:100%;height:54px;padding:0 18px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#f6f1e4;font:400 16px Inter,sans-serif;outline:none;height:auto;padding:16px 18px;resize:vertical"></textarea><div class="bt p" role="button" onClick="{{ send }}" style="cursor:pointer;flex:none">Send message</div><div class="cf-err" style="min-height:22px;font-size:14px;line-height:1.5;color:#D9C8A6"></div></div><div class="fb"><a class="bt p" href="mailto:Malak@mpavida.com">Email me</a><a class="bt" href="https://www.linkedin.com/in/malakusama/">Message on LinkedIn</a></div>
 <div class="em">Email<b>Malak@mpavida.com</b></div>
 <div class="fl"><a href="https://www.linkedin.com/in/malakusama/">LinkedIn</a><a href="https://www.instagram.com/mpavida/">Instagram</a><a href="/m-about">About</a></div>
 <div class="cp"><span>&copy; 2026 Malak Usama</span><a href="#top">Back to top</a></div>
@@ -227,6 +227,24 @@ class Component extends DCLogic {
     const open = !!this.state.menu;
     return {
       ovStyle: 'opacity:' + (open ? 1 : 0) + ';transform:translateY(' + (open ? '0' : '-12px') + ');pointer-events:' + (open ? 'auto' : 'none') + ';visibility:' + (open ? 'visible' : 'hidden'),
+      send: (e) => {
+        const f = e.currentTarget.closest('.cf'), g = (k) => ((f.querySelector('[data-f="' + k + '"]') || {}).value || '').trim();
+        const err = f.querySelector('.cf-err'), name = g('first'), email = g('email'), looking = g('looking'), more = g('more');
+        if (!name || !email || !looking) { err.textContent = 'Please add your name, email and what you are looking for.'; return; }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = 'Please check your email address.'; return; }
+        if (g('site')) { err.textContent = 'Thank you. I will reply soon.'; return; }
+        const btn = e.currentTarget, label = btn.textContent; btn.textContent = 'Sending'; btn.style.pointerEvents = 'none'; err.textContent = '';
+        const fallback = () => {
+          err.textContent = 'Could not send from here. Opening your email app instead.';
+          const a = document.createElement('a'); a.href = 'mailto:Malak@mpavida.com?subject=' + encodeURIComponent('Website enquiry: ' + looking) + '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nLooking for: ' + looking + (more ? '\n\n' + more : ''));
+          document.body.appendChild(a); a.click(); a.remove();
+        };
+        fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ access_key: 'a8f9018c-4782-44dd-9579-1c43864784e1', subject: 'Website enquiry: ' + looking, from_name: 'malakusama.com', name: name, email: email, looking_for: looking, message: more || '(no message)' }) })
+          .then((r) => r.json())
+          .then((j) => { if (!j || !j.success) throw new Error('send failed'); err.textContent = 'Thank you. Your message is on its way and I will reply soon.'; ['first', 'email', 'more'].forEach((k) => { const el = f.querySelector('[data-f="' + k + '"]'); if (el) el.value = ''; }); const sel = f.querySelector('[data-f="looking"]'); if (sel) sel.selectedIndex = 0; })
+          .catch(fallback)
+          .then(() => { btn.textContent = label; btn.style.pointerEvents = ''; });
+      },
       toggle: () => this.setState({ menu: !this.state.menu }),
       close: () => this.setState({ menu: false })
     };
