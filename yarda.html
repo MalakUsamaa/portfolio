@@ -445,8 +445,8 @@ class Component extends DCLogic {
         const el = document.querySelector('.yd2'); if (!el) return;
         const r = el.getBoundingClientRect(); if (r.bottom < 0 || r.top > window.innerHeight) return;
         const st = this.state, NN = [5,5,5,3], up = {};
-        for (let g = 0; g < 4; g++) if (!st['gt' + g]) up['gv' + g] = ((st['gv' + g] ?? 2) + 1) % NN[g];
         this._gvN = (this._gvN || 0) + 1;
+        for (let g = 0; g < 4; g++) if (!st['gt' + g] && this._gvN % 2 === 0) up['gv' + g] = ((st['gv' + g] ?? 2) + 1) % NN[g];
         if (!st.wxT && this._gvN % 2 === 0) up.wxI = ((st.wxI ?? 0) + 1) % 5;
         this.setState(up);
       }, 2400);
